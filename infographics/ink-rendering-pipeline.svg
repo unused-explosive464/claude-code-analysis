@@ -9,18 +9,7 @@
       <polygon points="0 0, 10 3, 0 6" fill="#ff6090"/>
     </marker>
 
-    <style type="text/css">
-      .stage-box { fill: #1a2f4a; stroke: #2d5a8c; stroke-width: 2; }
-      .stage-title { font-size: 20px; font-weight: 600; fill: #60c0ff; }
-      .stage-file { font-size: 13px; fill: #a0d8ff; font-family: 'JetBrains Mono', 'Fira Code', monospace; }
-      .stage-desc { font-size: 12px; fill: #90c0e0; }
-      .stage-item { font-size: 12px; fill: #80b0d0; }
-      .arrow-label { font-size: 12px; fill: #60c0ff; font-weight: 500; text-anchor: middle; }
-      .feedback-label { font-size: 12px; fill: #ff6090; font-weight: 500; text-anchor: middle; }
-      .legend-title { font-size: 18px; font-weight: 600; fill: #60c0ff; }
-      .legend-item { font-size: 12px; fill: #90c0e0; }
-      .metrics-label { font-size: 11px; fill: #7090b0; font-family: 'JetBrains Mono', 'Fira Code', monospace; }
-    </style>
+    
   </defs>
 
   <!-- Background -->
@@ -29,55 +18,55 @@
   <!-- ==================== ROW 1: Initial Stages (y=80-380) ==================== -->
 
   <!-- Stage 1: React Reconciliation -->
-  <rect x="40" y="80" width="700" height="300" class="stage-box" rx="8"/>
-  <text x="60" y="110" class="stage-title">React Reconciliation</text>
-  <text x="60" y="135" class="stage-file">reconciler.ts (512 LOC)</text>
-  <text x="60" y="160" class="stage-desc">Custom React Fiber Reconciler</text>
+  <rect x="40" y="80" width="700" height="300" class="stage-box" style="fill: #1a2f4a; stroke: #2d5a8c; stroke-width: 2;" rx="8"/>
+  <text x="60" y="110" class="stage-title" style="font-size: 20px; font-weight: 600; fill: #60c0ff;">React Reconciliation</text>
+  <text x="60" y="135" class="stage-file" style="font-size: 13px; fill: #a0d8ff; font-family: 'JetBrains Mono', 'Fira Code', monospace;">reconciler.ts (512 LOC)</text>
+  <text x="60" y="160" class="stage-desc" style="font-size: 12px; fill: #90c0e0;">Custom React Fiber Reconciler</text>
 
-  <text x="60" y="190" class="stage-item">• Node lifecycle:</text>
-  <text x="80" y="208" class="stage-item">createInstance, appendChild</text>
-  <text x="80" y="224" class="stage-item">commitUpdate, removeChild</text>
+  <text x="60" y="190" class="stage-item" style="font-size: 12px; fill: #80b0d0;">• Node lifecycle:</text>
+  <text x="80" y="208" class="stage-item" style="font-size: 12px; fill: #80b0d0;">createInstance, appendChild</text>
+  <text x="80" y="224" class="stage-item" style="font-size: 12px; fill: #80b0d0;">commitUpdate, removeChild</text>
 
-  <text x="60" y="250" class="stage-item">• Event handlers via</text>
-  <text x="80" y="266" class="stage-item">_eventHandlers</text>
+  <text x="60" y="250" class="stage-item" style="font-size: 12px; fill: #80b0d0;">• Event handlers via</text>
+  <text x="80" y="266" class="stage-item" style="font-size: 12px; fill: #80b0d0;">_eventHandlers</text>
 
-  <text x="60" y="295" class="stage-item">• DevTools bridge</text>
+  <text x="60" y="295" class="stage-item" style="font-size: 12px; fill: #80b0d0;">• DevTools bridge</text>
 
   <!-- Stage 2: DOM Element Tree -->
-  <rect x="780" y="80" width="700" height="300" class="stage-box" rx="8"/>
-  <text x="800" y="110" class="stage-title">DOM Element Tree</text>
-  <text x="800" y="135" class="stage-file">dom.ts (484 LOC)</text>
-  <text x="800" y="160" class="stage-desc">DOMElement Interface</text>
+  <rect x="780" y="80" width="700" height="300" class="stage-box" style="fill: #1a2f4a; stroke: #2d5a8c; stroke-width: 2;" rx="8"/>
+  <text x="800" y="110" class="stage-title" style="font-size: 20px; font-weight: 600; fill: #60c0ff;">DOM Element Tree</text>
+  <text x="800" y="135" class="stage-file" style="font-size: 13px; fill: #a0d8ff; font-family: 'JetBrains Mono', 'Fira Code', monospace;">dom.ts (484 LOC)</text>
+  <text x="800" y="160" class="stage-desc" style="font-size: 12px; fill: #90c0e0;">DOMElement Interface</text>
 
-  <text x="800" y="190" class="stage-item">• Node types: ink-root,</text>
-  <text x="820" y="206" class="stage-item">ink-box, ink-text,</text>
-  <text x="820" y="222" class="stage-item">ink-virtual-text</text>
+  <text x="800" y="190" class="stage-item" style="font-size: 12px; fill: #80b0d0;">• Node types: ink-root,</text>
+  <text x="820" y="206" class="stage-item" style="font-size: 12px; fill: #80b0d0;">ink-box, ink-text,</text>
+  <text x="820" y="222" class="stage-item" style="font-size: 12px; fill: #80b0d0;">ink-virtual-text</text>
 
-  <text x="800" y="250" class="stage-item">• Yoga node binding</text>
+  <text x="800" y="250" class="stage-item" style="font-size: 12px; fill: #80b0d0;">• Yoga node binding</text>
 
-  <text x="800" y="275" class="stage-item">• Attributes: style,</text>
-  <text x="820" y="291" class="stage-item">textStyle, eventHandlers</text>
+  <text x="800" y="275" class="stage-item" style="font-size: 12px; fill: #80b0d0;">• Attributes: style,</text>
+  <text x="820" y="291" class="stage-item" style="font-size: 12px; fill: #80b0d0;">textStyle, eventHandlers</text>
 
   <!-- Stage 3: Yoga Layout -->
-  <rect x="1520" y="80" width="700" height="300" class="stage-box" rx="8"/>
-  <text x="1540" y="110" class="stage-title">Yoga Layout Engine</text>
-  <text x="1540" y="135" class="stage-file">layout/yoga.ts (308 LOC)</text>
-  <text x="1540" y="160" class="stage-desc">Native flex layout</text>
+  <rect x="1520" y="80" width="700" height="300" class="stage-box" style="fill: #1a2f4a; stroke: #2d5a8c; stroke-width: 2;" rx="8"/>
+  <text x="1540" y="110" class="stage-title" style="font-size: 20px; font-weight: 600; fill: #60c0ff;">Yoga Layout Engine</text>
+  <text x="1540" y="135" class="stage-file" style="font-size: 13px; fill: #a0d8ff; font-family: 'JetBrains Mono', 'Fira Code', monospace;">layout/yoga.ts (308 LOC)</text>
+  <text x="1540" y="160" class="stage-desc" style="font-size: 12px; fill: #90c0e0;">Native flex layout</text>
 
-  <text x="1540" y="190" class="stage-item">• Ink props → Yoga enums</text>
+  <text x="1540" y="190" class="stage-item" style="font-size: 12px; fill: #80b0d0;">• Ink props → Yoga enums</text>
 
-  <text x="1540" y="215" class="stage-item">• calculateLayout()</text>
+  <text x="1540" y="215" class="stage-item" style="font-size: 12px; fill: #80b0d0;">• calculateLayout()</text>
 
-  <text x="1540" y="240" class="stage-item">• 4-slot LRU cache</text>
+  <text x="1540" y="240" class="stage-item" style="font-size: 12px; fill: #80b0d0;">• 4-slot LRU cache</text>
 
-  <text x="1540" y="265" class="stage-item">• Incremental updates</text>
+  <text x="1540" y="265" class="stage-item" style="font-size: 12px; fill: #80b0d0;">• Incremental updates</text>
 
   <!-- Horizontal arrows Row 1 -->
   <path d="M 750 230 L 770 230" stroke="#60c0ff" stroke-width="2" fill="none" marker-end="url(#arrowHead)"/>
-  <text x="760" y="215" class="arrow-label">React → DOM</text>
+  <text x="760" y="215" class="arrow-label" style="font-size: 12px; fill: #60c0ff; font-weight: 500; text-anchor: middle;">React → DOM</text>
 
   <path d="M 1490 230 L 1510 230" stroke="#60c0ff" stroke-width="2" fill="none" marker-end="url(#arrowHead)"/>
-  <text x="1500" y="215" class="arrow-label">Build → Layout</text>
+  <text x="1500" y="215" class="arrow-label" style="font-size: 12px; fill: #60c0ff; font-weight: 500; text-anchor: middle;">Build → Layout</text>
 
   <!-- ==================== ROW 2: Rendering Stages (y=440-780) ==================== -->
 
@@ -85,98 +74,98 @@
   <path d="M 100 380 L 100 440" stroke="#60c0ff" stroke-width="2" fill="none" marker-end="url(#arrowHead)"/>
 
   <!-- Stage 4: Render to Output -->
-  <rect x="40" y="440" width="700" height="340" class="stage-box" rx="8"/>
-  <text x="60" y="470" class="stage-title">Render to Output</text>
-  <text x="60" y="495" class="stage-file">render-node-to-output.ts</text>
-  <text x="60" y="512" class="stage-file">(1,462 LOC)</text>
-  <text x="60" y="537" class="stage-desc">PRIMARY ENGINE</text>
+  <rect x="40" y="440" width="700" height="340" class="stage-box" style="fill: #1a2f4a; stroke: #2d5a8c; stroke-width: 2;" rx="8"/>
+  <text x="60" y="470" class="stage-title" style="font-size: 20px; font-weight: 600; fill: #60c0ff;">Render to Output</text>
+  <text x="60" y="495" class="stage-file" style="font-size: 13px; fill: #a0d8ff; font-family: 'JetBrains Mono', 'Fira Code', monospace;">render-node-to-output.ts</text>
+  <text x="60" y="512" class="stage-file" style="font-size: 13px; fill: #a0d8ff; font-family: 'JetBrains Mono', 'Fira Code', monospace;">(1,462 LOC)</text>
+  <text x="60" y="537" class="stage-desc" style="font-size: 12px; fill: #90c0e0;">PRIMARY ENGINE</text>
 
-  <text x="60" y="567" class="stage-item">• DFS traverse</text>
+  <text x="60" y="567" class="stage-item" style="font-size: 12px; fill: #80b0d0;">• DFS traverse</text>
 
-  <text x="60" y="592" class="stage-item">• Per-node: clip, text wrap,</text>
-  <text x="80" y="608" class="stage-item">borders, selection overlay</text>
+  <text x="60" y="592" class="stage-item" style="font-size: 12px; fill: #80b0d0;">• Per-node: clip, text wrap,</text>
+  <text x="80" y="608" class="stage-item" style="font-size: 12px; fill: #80b0d0;">borders, selection overlay</text>
 
-  <text x="60" y="633" class="stage-item">• Write/blit/clear/clip</text>
-  <text x="80" y="649" class="stage-item">operations</text>
+  <text x="60" y="633" class="stage-item" style="font-size: 12px; fill: #80b0d0;">• Write/blit/clear/clip</text>
+  <text x="80" y="649" class="stage-item" style="font-size: 12px; fill: #80b0d0;">operations</text>
 
-  <text x="60" y="674" class="stage-item">• Word/grapheme wrapping</text>
+  <text x="60" y="674" class="stage-item" style="font-size: 12px; fill: #80b0d0;">• Word/grapheme wrapping</text>
 
   <!-- Stage 5: Screen Buffer -->
-  <rect x="780" y="440" width="700" height="340" class="stage-box" rx="8"/>
-  <text x="800" y="470" class="stage-title">Screen Buffer</text>
-  <text x="800" y="495" class="stage-file">screen.ts (1,486 LOC)</text>
-  <text x="800" y="520" class="stage-desc">Cell grid: packed Int32Array</text>
+  <rect x="780" y="440" width="700" height="340" class="stage-box" style="fill: #1a2f4a; stroke: #2d5a8c; stroke-width: 2;" rx="8"/>
+  <text x="800" y="470" class="stage-title" style="font-size: 20px; font-weight: 600; fill: #60c0ff;">Screen Buffer</text>
+  <text x="800" y="495" class="stage-file" style="font-size: 13px; fill: #a0d8ff; font-family: 'JetBrains Mono', 'Fira Code', monospace;">screen.ts (1,486 LOC)</text>
+  <text x="800" y="520" class="stage-desc" style="font-size: 12px; fill: #90c0e0;">Cell grid: packed Int32Array</text>
 
-  <text x="800" y="550" class="stage-item">• Cell: styleId[31:17] |</text>
-  <text x="820" y="566" class="stage-item">hyperlinkId[16:2] |</text>
-  <text x="820" y="582" class="stage-item">width[1:0]</text>
+  <text x="800" y="550" class="stage-item" style="font-size: 12px; fill: #80b0d0;">• Cell: styleId[31:17] |</text>
+  <text x="820" y="566" class="stage-item" style="font-size: 12px; fill: #80b0d0;">hyperlinkId[16:2] |</text>
+  <text x="820" y="582" class="stage-item" style="font-size: 12px; fill: #80b0d0;">width[1:0]</text>
 
-  <text x="800" y="607" class="stage-item">• THREE POOLS:</text>
-  <text x="820" y="623" class="stage-item">CharPool (ASCII 30% faster)</text>
-  <text x="820" y="639" class="stage-item">StylePool, HyperlinkPool</text>
+  <text x="800" y="607" class="stage-item" style="font-size: 12px; fill: #80b0d0;">• THREE POOLS:</text>
+  <text x="820" y="623" class="stage-item" style="font-size: 12px; fill: #80b0d0;">CharPool (ASCII 30% faster)</text>
+  <text x="820" y="639" class="stage-item" style="font-size: 12px; fill: #80b0d0;">StylePool, HyperlinkPool</text>
 
-  <!-- Stage 6: Frame Diff & Terminal -->
-  <rect x="1520" y="440" width="700" height="340" class="stage-box" rx="8"/>
-  <text x="1540" y="470" class="stage-title">Frame Diff & Terminal</text>
-  <text x="1540" y="495" class="stage-file">log-update.ts (773 LOC)</text>
-  <text x="1540" y="520" class="stage-desc">Frame-by-frame optimization</text>
+  <!-- Stage 6: Frame Diff &amp; Terminal -->
+  <rect x="1520" y="440" width="700" height="340" class="stage-box" style="fill: #1a2f4a; stroke: #2d5a8c; stroke-width: 2;" rx="8"/>
+  <text x="1540" y="470" class="stage-title" style="font-size: 20px; font-weight: 600; fill: #60c0ff;">Frame Diff &amp; Terminal</text>
+  <text x="1540" y="495" class="stage-file" style="font-size: 13px; fill: #a0d8ff; font-family: 'JetBrains Mono', 'Fira Code', monospace;">log-update.ts (773 LOC)</text>
+  <text x="1540" y="520" class="stage-desc" style="font-size: 12px; fill: #90c0e0;">Frame-by-frame optimization</text>
 
-  <text x="1540" y="550" class="stage-item">• ANSI style tracking</text>
+  <text x="1540" y="550" class="stage-item" style="font-size: 12px; fill: #80b0d0;">• ANSI style tracking</text>
 
-  <text x="1540" y="575" class="stage-item">• Cursor optimization</text>
+  <text x="1540" y="575" class="stage-item" style="font-size: 12px; fill: #80b0d0;">• Cursor optimization</text>
 
-  <text x="1540" y="600" class="stage-item">• DECSTBM scroll (10KB→50B)</text>
+  <text x="1540" y="600" class="stage-item" style="font-size: 12px; fill: #80b0d0;">• DECSTBM scroll (10KB→50B)</text>
 
-  <text x="1540" y="625" class="stage-item">• DEC 2026 sync output</text>
+  <text x="1540" y="625" class="stage-item" style="font-size: 12px; fill: #80b0d0;">• DEC 2026 sync output</text>
 
-  <text x="1540" y="650" class="stage-item">• writeDiffToTerminal()</text>
+  <text x="1540" y="650" class="stage-item" style="font-size: 12px; fill: #80b0d0;">• writeDiffToTerminal()</text>
 
   <!-- Horizontal arrows Row 2 -->
   <path d="M 750 610 L 770 610" stroke="#60c0ff" stroke-width="2" fill="none" marker-end="url(#arrowHead)"/>
-  <text x="760" y="595" class="arrow-label">Layout → Buffer</text>
+  <text x="760" y="595" class="arrow-label" style="font-size: 12px; fill: #60c0ff; font-weight: 500; text-anchor: middle;">Layout → Buffer</text>
 
   <path d="M 1490 610 L 1510 610" stroke="#60c0ff" stroke-width="2" fill="none" marker-end="url(#arrowHead)"/>
-  <text x="1500" y="595" class="arrow-label">Buffer → Diff</text>
+  <text x="1500" y="595" class="arrow-label" style="font-size: 12px; fill: #60c0ff; font-weight: 500; text-anchor: middle;">Buffer → Diff</text>
 
   <!-- ==================== ROW 3: Supporting Systems (y=840-1140) ==================== -->
 
   <!-- Selection System -->
-  <rect x="40" y="840" width="700" height="300" class="stage-box" rx="8"/>
-  <text x="60" y="870" class="stage-title">Selection System</text>
-  <text x="60" y="895" class="stage-file">selection.ts (917 LOC)</text>
-  <text x="60" y="920" class="stage-desc">Anchor/focus coordinates</text>
+  <rect x="40" y="840" width="700" height="300" class="stage-box" style="fill: #1a2f4a; stroke: #2d5a8c; stroke-width: 2;" rx="8"/>
+  <text x="60" y="870" class="stage-title" style="font-size: 20px; font-weight: 600; fill: #60c0ff;">Selection System</text>
+  <text x="60" y="895" class="stage-file" style="font-size: 13px; fill: #a0d8ff; font-family: 'JetBrains Mono', 'Fira Code', monospace;">selection.ts (917 LOC)</text>
+  <text x="60" y="920" class="stage-desc" style="font-size: 12px; fill: #90c0e0;">Anchor/focus coordinates</text>
 
-  <text x="60" y="950" class="stage-item">• Multi-click: char/word/line</text>
+  <text x="60" y="950" class="stage-item" style="font-size: 12px; fill: #80b0d0;">• Multi-click: char/word/line</text>
 
-  <text x="60" y="975" class="stage-item">• Drag-to-scroll</text>
+  <text x="60" y="975" class="stage-item" style="font-size: 12px; fill: #80b0d0;">• Drag-to-scroll</text>
 
-  <text x="60" y="1000" class="stage-item">• hit-test.ts:</text>
-  <text x="80" y="1016" class="stage-item">click → DOM element</text>
+  <text x="60" y="1000" class="stage-item" style="font-size: 12px; fill: #80b0d0;">• hit-test.ts:</text>
+  <text x="80" y="1016" class="stage-item" style="font-size: 12px; fill: #80b0d0;">click → DOM element</text>
 
   <!-- Terminal Capabilities -->
-  <rect x="780" y="840" width="700" height="300" class="stage-box" rx="8"/>
-  <text x="800" y="870" class="stage-title">Terminal Capabilities</text>
-  <text x="800" y="895" class="stage-file">terminal.ts + terminal-querier.ts</text>
-  <text x="800" y="920" class="stage-desc">Dynamic capability detection</text>
+  <rect x="780" y="840" width="700" height="300" class="stage-box" style="fill: #1a2f4a; stroke: #2d5a8c; stroke-width: 2;" rx="8"/>
+  <text x="800" y="870" class="stage-title" style="font-size: 20px; font-weight: 600; fill: #60c0ff;">Terminal Capabilities</text>
+  <text x="800" y="895" class="stage-file" style="font-size: 13px; fill: #a0d8ff; font-family: 'JetBrains Mono', 'Fira Code', monospace;">terminal.ts + terminal-querier.ts</text>
+  <text x="800" y="920" class="stage-desc" style="font-size: 12px; fill: #90c0e0;">Dynamic capability detection</text>
 
-  <text x="800" y="950" class="stage-item">• XTVERSION, Kitty keyboard</text>
+  <text x="800" y="950" class="stage-item" style="font-size: 12px; fill: #80b0d0;">• XTVERSION, Kitty keyboard</text>
 
-  <text x="800" y="975" class="stage-item">• DEC 2026, xterm.js detection</text>
+  <text x="800" y="975" class="stage-item" style="font-size: 12px; fill: #80b0d0;">• DEC 2026, xterm.js detection</text>
 
-  <text x="800" y="1000" class="stage-item">• Dynamic feature selection</text>
+  <text x="800" y="1000" class="stage-item" style="font-size: 12px; fill: #80b0d0;">• Dynamic feature selection</text>
 
   <!-- Input Pipeline -->
-  <rect x="1520" y="840" width="700" height="300" class="stage-box" rx="8"/>
-  <text x="1540" y="870" class="stage-title">Input Pipeline</text>
-  <text x="1540" y="895" class="stage-file">parse-keypress.ts (801 LOC)</text>
-  <text x="1540" y="920" class="stage-desc">Multi-protocol input parsing</text>
+  <rect x="1520" y="840" width="700" height="300" class="stage-box" style="fill: #1a2f4a; stroke: #2d5a8c; stroke-width: 2;" rx="8"/>
+  <text x="1540" y="870" class="stage-title" style="font-size: 20px; font-weight: 600; fill: #60c0ff;">Input Pipeline</text>
+  <text x="1540" y="895" class="stage-file" style="font-size: 13px; fill: #a0d8ff; font-family: 'JetBrains Mono', 'Fira Code', monospace;">parse-keypress.ts (801 LOC)</text>
+  <text x="1540" y="920" class="stage-desc" style="font-size: 12px; fill: #90c0e0;">Multi-protocol input parsing</text>
 
-  <text x="1540" y="950" class="stage-item">• CSI u (Kitty), xterm</text>
-  <text x="1560" y="966" class="stage-item">modifyOtherKeys</text>
+  <text x="1540" y="950" class="stage-item" style="font-size: 12px; fill: #80b0d0;">• CSI u (Kitty), xterm</text>
+  <text x="1560" y="966" class="stage-item" style="font-size: 12px; fill: #80b0d0;">modifyOtherKeys</text>
 
-  <text x="1540" y="991" class="stage-item">• SGR mouse, bracketed paste</text>
+  <text x="1540" y="991" class="stage-item" style="font-size: 12px; fill: #80b0d0;">• SGR mouse, bracketed paste</text>
 
-  <text x="1540" y="1016" class="stage-item">• Capture→bubble dispatch</text>
+  <text x="1540" y="1016" class="stage-item" style="font-size: 12px; fill: #80b0d0;">• Capture→bubble dispatch</text>
 
   <!-- ==================== FEEDBACK ARROWS ==================== -->
 
@@ -191,19 +180,19 @@
   <path d="M 1550 840 L 1550 20 Q 1550 -20 1250 -20 Q 200 -20 200 80"
         stroke="#ff6090" stroke-width="2" stroke-dasharray="5,5" fill="none" marker-end="url(#arrowHeadFeedback)"/>
 
-  <!-- ==================== LEGEND & METRICS (Bottom Strip y=1300-1500) ==================== -->
+  <!-- ==================== LEGEND &amp; METRICS (Bottom Strip y=1300-1500) ==================== -->
 
   <line x1="40" y1="1300" x2="2360" y2="1300" stroke="#2d5a8c" stroke-width="1"/>
 
-  <text x="40" y="1335" class="legend-title">Architecture Overview</text>
+  <text x="40" y="1335" class="legend-title" style="font-size: 18px; font-weight: 600; fill: #60c0ff;">Architecture Overview</text>
 
-  <text x="40" y="1365" class="legend-item">• Forward flow (blue): Input through reconciliation, layout, render, diff to terminal output</text>
-  <text x="40" y="1385" class="legend-item">• Feedback flow (pink dashed): Selection state → render, terminal caps → output, input → reconciliation</text>
+  <text x="40" y="1365" class="legend-item" style="font-size: 12px; fill: #90c0e0;">• Forward flow (blue): Input through reconciliation, layout, render, diff to terminal output</text>
+  <text x="40" y="1385" class="legend-item" style="font-size: 12px; fill: #90c0e0;">• Feedback flow (pink dashed): Selection state → render, terminal caps → output, input → reconciliation</text>
 
-  <text x="40" y="1420" class="metrics-label">Total LOC: 7,743 | Pools: 3 | Max LRU: 4 | DFS traversal with clip regions and selection overlay</text>
+  <text x="40" y="1420" class="metrics-label" style="font-size: 11px; fill: #7090b0; font-family: 'JetBrains Mono', 'Fira Code', monospace;">Total LOC: 7,743 | Pools: 3 | Max LRU: 4 | DFS traversal with clip regions and selection overlay</text>
 
-  <text x="40" y="1450" class="metrics-label">Key optimization: Frame diff reduces output from 10KB average to 50B on idle scroll; cell packing uses 31 bits for style ID</text>
+  <text x="40" y="1450" class="metrics-label" style="font-size: 11px; fill: #7090b0; font-family: 'JetBrains Mono', 'Fira Code', monospace;">Key optimization: Frame diff reduces output from 10KB average to 50B on idle scroll; cell packing uses 31 bits for style ID</text>
 
-  <text x="40" y="1480" class="metrics-label">Input protocols: CSI u (Kitty), xterm modifyOtherKeys, SGR mouse, bracketed paste, dynamic capability detection</text>
+  <text x="40" y="1480" class="metrics-label" style="font-size: 11px; fill: #7090b0; font-family: 'JetBrains Mono', 'Fira Code', monospace;">Input protocols: CSI u (Kitty), xterm modifyOtherKeys, SGR mouse, bracketed paste, dynamic capability detection</text>
 
 </svg>

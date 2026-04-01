@@ -71,10 +71,10 @@
   <line x1="30" y1="130" x2="2370" y2="130" stroke="#334155" stroke-width="2"/>
 
   <!-- ============================================================================ -->
-  <!-- LAYER 1: ENTRY & BOOTSTRAP (top) -->
+  <!-- LAYER 1: ENTRY &amp; BOOTSTRAP (top) -->
   <!-- ============================================================================ -->
 
-  <text x="50" y="160" font-size="20" font-weight="bold" fill="#cbd5e1">Layer 1: Entry & Bootstrap</text>
+  <text x="50" y="160" font-size="20" font-weight="bold" fill="#cbd5e1">Layer 1: Entry &amp; Bootstrap</text>
   <line x1="30" y1="175" x2="2370" y2="175" stroke="#1e293b" stroke-width="1" stroke-dasharray="5,5"/>
 
   <!-- main.tsx box -->
@@ -97,7 +97,7 @@
   <text x="495" y="315" font-size="11" text-anchor="middle" fill="#93c5fd">programmatic API</text>
   <text x="495" y="332" font-size="11" text-anchor="middle" fill="#93c5fd">~380 LOC</text>
 
-  <!-- MCP & Sandbox -->
+  <!-- MCP &amp; Sandbox -->
   <rect x="600" y="190" width="150" height="65" fill="url(#blueGrad)" stroke="#3b82f6" stroke-width="2" rx="6"/>
   <text x="675" y="210" font-size="12" font-weight="bold" text-anchor="middle" fill="#e0e7ff">MCP Server</text>
   <text x="675" y="230" font-size="11" text-anchor="middle" fill="#93c5fd">stdio transport</text>
@@ -108,14 +108,14 @@
   <text x="675" y="315" font-size="11" text-anchor="middle" fill="#93c5fd">isolated runtime</text>
   <text x="675" y="332" font-size="11" text-anchor="middle" fill="#93c5fd">~450 LOC</text>
 
-  <!-- CLI Flags & Env Vars -->
+  <!-- CLI Flags &amp; Env Vars -->
   <rect x="800" y="190" width="200" height="150" fill="url(#blueGrad)" stroke="#3b82f6" stroke-width="2" rx="6"/>
   <text x="900" y="215" font-size="13" font-weight="bold" text-anchor="middle" fill="#e0e7ff">CLI Configuration</text>
   <text x="900" y="235" font-size="11" text-anchor="middle" fill="#93c5fd">60+ CLI Flags</text>
   <text x="900" y="254" font-size="11" text-anchor="middle" fill="#93c5fd">35+ Environment Variables</text>
   <text x="900" y="273" font-size="11" text-anchor="middle" fill="#93c5fd">88 Build-Time Feature Gates</text>
-  <text x="900" y="292" font-size="11" text-anchor="middle" fill="#93c5fd">Config validation & merging</text>
-  <text x="900" y="311" font-size="11" text-anchor="middle" fill="#93c5fd">Profile & preference loading</text>
+  <text x="900" y="292" font-size="11" text-anchor="middle" fill="#93c5fd">Config validation &amp; merging</text>
+  <text x="900" y="311" font-size="11" text-anchor="middle" fill="#93c5fd">Profile &amp; preference loading</text>
   <text x="900" y="330" font-size="13" font-weight="bold" text-anchor="middle" fill="#fbbf24">~1,850 LOC</text>
 
   <!-- Feature Gates -->
@@ -136,7 +136,7 @@
   <!-- LAYER 2: UI LAYER -->
   <!-- ============================================================================ -->
 
-  <text x="50" y="400" font-size="20" font-weight="bold" fill="#cbd5e1">Layer 2: UI & Rendering Engine</text>
+  <text x="50" y="400" font-size="20" font-weight="bold" fill="#cbd5e1">Layer 2: UI &amp; Rendering Engine</text>
   <line x1="30" y1="415" x2="2370" y2="415" stroke="#1e293b" stroke-width="1" stroke-dasharray="5,5"/>
 
   <!-- Ink Engine -->
@@ -172,9 +172,9 @@
   <text x="820" y="570" font-size="11" text-anchor="middle" fill="#fbcfe8">useAppState - reactive store</text>
   <text x="820" y="593" font-size="13" font-weight="bold" text-anchor="middle" fill="#fbbf24">~24,100 LOC</text>
 
-  <!-- Keybindings & Input -->
+  <!-- Keybindings &amp; Input -->
   <rect x="1000" y="430" width="260" height="180" fill="url(#pinkGrad)" stroke="#db2777" stroke-width="2" rx="8"/>
-  <text x="1130" y="460" font-size="14" font-weight="bold" text-anchor="middle" fill="#fce7f3">Input & Keybindings</text>
+  <text x="1130" y="460" font-size="14" font-weight="bold" text-anchor="middle" fill="#fce7f3">Input &amp; Keybindings</text>
   <text x="1130" y="480" font-size="11" text-anchor="middle" fill="#fbcfe8">220+ keybindings</text>
   <text x="1130" y="498" font-size="11" text-anchor="middle" fill="#fbcfe8">18 context modes</text>
   <text x="1130" y="516" font-size="11" text-anchor="middle" fill="#fbcfe8">Modal: editing/navigation</text>
@@ -183,15 +183,15 @@
   <text x="1130" y="570" font-size="11" text-anchor="middle" fill="#fbcfe8">Key sequence macros</text>
   <text x="1130" y="593" font-size="13" font-weight="bold" text-anchor="middle" fill="#fbbf24">~8,900 LOC</text>
 
-  <!-- Theme & Style -->
+  <!-- Theme &amp; Style -->
   <rect x="1310" y="430" width="260" height="180" fill="url(#pinkGrad)" stroke="#db2777" stroke-width="2" rx="8"/>
-  <text x="1440" y="460" font-size="14" font-weight="bold" text-anchor="middle" fill="#fce7f3">Theme & Styling</text>
+  <text x="1440" y="460" font-size="14" font-weight="bold" text-anchor="middle" fill="#fce7f3">Theme &amp; Styling</text>
   <text x="1440" y="480" font-size="11" text-anchor="middle" fill="#fbcfe8">Dark theme (primary)</text>
   <text x="1440" y="498" font-size="11" text-anchor="middle" fill="#fbcfe8">Accessible color palette</text>
   <text x="1440" y="516" font-size="11" text-anchor="middle" fill="#fbcfe8">CSS-in-JS (emotion)</text>
   <text x="1440" y="534" font-size="11" text-anchor="middle" fill="#fbcfe8">Responsive breakpoints</text>
   <text x="1440" y="552" font-size="11" text-anchor="middle" fill="#fbcfe8">Animation library</text>
-  <text x="1440" y="570" font-size="11" text-anchor="middle" fill="#fbcfe8">Custom fonts & icons</text>
+  <text x="1440" y="570" font-size="11" text-anchor="middle" fill="#fbcfe8">Custom fonts &amp; icons</text>
   <text x="1440" y="593" font-size="13" font-weight="bold" text-anchor="middle" fill="#fbbf24">~6,800 LOC</text>
 
   <!-- Terminal Integration -->
@@ -223,7 +223,7 @@
   <text x="210" y="788" font-size="11" text-anchor="middle" fill="#93c5fd">6 states: IDLE → QUEUED →</text>
   <text x="210" y="806" font-size="11" text-anchor="middle" fill="#93c5fd">EXECUTING → STREAMING →</text>
   <text x="210" y="824" font-size="11" text-anchor="middle" fill="#93c5fd">DONE → ARCHIVING</text>
-  <text x="210" y="842" font-size="11" text-anchor="middle" fill="#93c5fd">Signal handling & cleanup</text>
+  <text x="210" y="842" font-size="11" text-anchor="middle" fill="#93c5fd">Signal handling &amp; cleanup</text>
   <text x="210" y="860" font-size="13" font-weight="bold" text-anchor="middle" fill="#fbbf24">~1,920 LOC</text>
 
   <!-- API Client -->
@@ -271,10 +271,10 @@
   <text x="1220" y="910" font-size="11" fill="#93c5fd">execute queries</text>
 
   <!-- ============================================================================ -->
-  <!-- LAYER 4: PERMISSION & SECURITY -->
+  <!-- LAYER 4: PERMISSION &amp; SECURITY -->
   <!-- ============================================================================ -->
 
-  <text x="50" y="960" font-size="20" font-weight="bold" fill="#cbd5e1">Layer 4: Permission & Security</text>
+  <text x="50" y="960" font-size="20" font-weight="bold" fill="#cbd5e1">Layer 4: Permission &amp; Security</text>
   <line x1="30" y1="975" x2="2370" y2="975" stroke="#1e293b" stroke-width="1" stroke-dasharray="5,5"/>
 
   <!-- Permission System -->
@@ -315,10 +315,10 @@
   <text x="1410" y="1020" font-size="14" font-weight="bold" text-anchor="middle" fill="#dcfce7">Secret Scanning</text>
   <text x="1410" y="1040" font-size="11" text-anchor="middle" fill="#bbf7d0">44 gitleaks rules</text>
   <text x="1410" y="1058" font-size="11" text-anchor="middle" fill="#bbf7d0">AWS keys, GCP tokens, GitHub PATs</text>
-  <text x="1410" y="1076" font-size="11" text-anchor="middle" fill="#bbf7d0">Stripe & Twilio API keys</text>
+  <text x="1410" y="1076" font-size="11" text-anchor="middle" fill="#bbf7d0">Stripe &amp; Twilio API keys</text>
   <text x="1410" y="1094" font-size="11" text-anchor="middle" fill="#bbf7d0">Regex + entropy detection</text>
   <text x="1410" y="1112" font-size="11" text-anchor="middle" fill="#bbf7d0">Real-time file scanning</text>
-  <text x="1410" y="1130" font-size="11" text-anchor="middle" fill="#bbf7d0">User notification & blocking</text>
+  <text x="1410" y="1130" font-size="11" text-anchor="middle" fill="#bbf7d0">User notification &amp; blocking</text>
   <text x="1410" y="1148" font-size="13" font-weight="bold" text-anchor="middle" fill="#fbbf24">Pattern-based detection</text>
 
   <!-- Audit Logging -->
@@ -363,7 +363,7 @@
 
   <!-- Session API -->
   <rect x="830" y="1260" width="340" height="140" fill="url(#purpleGrad)" stroke="#a78bfa" stroke-width="2" rx="8"/>
-  <text x="1000" y="1290" font-size="14" font-weight="bold" text-anchor="middle" fill="#f3e8ff">Session API & Teleportation</text>
+  <text x="1000" y="1290" font-size="14" font-weight="bold" text-anchor="middle" fill="#f3e8ff">Session API &amp; Teleportation</text>
   <text x="1000" y="1310" font-size="11" text-anchor="middle" fill="#e9d5ff">/v1/sessions endpoint</text>
   <text x="1000" y="1328" font-size="11" text-anchor="middle" fill="#e9d5ff">Git bundle serialization</text>
   <text x="1000" y="1346" font-size="11" text-anchor="middle" fill="#e9d5ff">Cross-process transfer</text>
@@ -393,10 +393,10 @@
   <text x="1220" y="1430" font-size="11" fill="#e9d5ff">agent coordination</text>
 
   <!-- ============================================================================ -->
-  <!-- LAYER 6: MEMORY & STATE MANAGEMENT -->
+  <!-- LAYER 6: MEMORY &amp; STATE MANAGEMENT -->
   <!-- ============================================================================ -->
 
-  <text x="50" y="1480" font-size="20" font-weight="bold" fill="#cbd5e1">Layer 6: Memory & State Management</text>
+  <text x="50" y="1480" font-size="20" font-weight="bold" fill="#cbd5e1">Layer 6: Memory &amp; State Management</text>
   <line x1="30" y1="1495" x2="2370" y2="1495" stroke="#1e293b" stroke-width="1" stroke-dasharray="5,5"/>
 
   <!-- Memdir Semantic Memory -->
@@ -431,7 +431,7 @@
   <text x="1390" y="1540" font-size="14" font-weight="bold" text-anchor="middle" fill="#fef3c7">autoDream Consolidation</text>
   <text x="1390" y="1560" font-size="11" text-anchor="middle" fill="#fde047">24h+ background run</text>
   <text x="1390" y="1578" font-size="11" text-anchor="middle" fill="#fde047">Summarize old memories</text>
-  <text x="1390" y="1596" font-size="11" text-anchor="middle" fill="#fde047">Extract patterns & insights</text>
+  <text x="1390" y="1596" font-size="11" text-anchor="middle" fill="#fde047">Extract patterns &amp; insights</text>
   <text x="1390" y="1614" font-size="11" text-anchor="middle" fill="#fde047">Compress archival data</text>
   <text x="1390" y="1632" font-size="11" text-anchor="middle" fill="#fde047">~1,200 LOC</text>
 
@@ -449,10 +449,10 @@
   <text x="1220" y="1680" font-size="11" fill="#fde047">state updates</text>
 
   <!-- ============================================================================ -->
-  <!-- LAYER 7: PLUGINS & TOOLS (bottom) -->
+  <!-- LAYER 7: PLUGINS &amp; TOOLS (bottom) -->
   <!-- ============================================================================ -->
 
-  <text x="50" y="1730" font-size="20" font-weight="bold" fill="#cbd5e1">Layer 7: Plugins, Tools & Integrations</text>
+  <text x="50" y="1730" font-size="20" font-weight="bold" fill="#cbd5e1">Layer 7: Plugins, Tools &amp; Integrations</text>
   <line x1="30" y1="1745" x2="2370" y2="1745" stroke="#1e293b" stroke-width="1" stroke-dasharray="5,5"/>
 
   <!-- Plugin System -->
@@ -492,9 +492,9 @@
 
   <!-- Web Fetch -->
   <rect x="1650" y="1680" width="280" height="120" fill="url(#orangeGrad)" stroke="#d97706" stroke-width="2" rx="6"/>
-  <text x="1790" y="1785" font-size="13" font-weight="bold" text-anchor="middle" fill="#fed7aa">Web Fetch & Scraping</text>
+  <text x="1790" y="1785" font-size="13" font-weight="bold" text-anchor="middle" fill="#fed7aa">Web Fetch &amp; Scraping</text>
   <text x="1790" y="1805" font-size="11" text-anchor="middle" fill="#fdba74">HTTP client with retry</text>
-  <text x="1790" y="1823" font-size="11" text-anchor="middle" fill="#fdba74">DOM parsing & extraction</text>
+  <text x="1790" y="1823" font-size="11" text-anchor="middle" fill="#fdba74">DOM parsing &amp; extraction</text>
   <text x="1790" y="1841" font-size="11" text-anchor="middle" fill="#fdba74">Rate limiting</text>
 
   <!-- ============================================================================ -->
@@ -503,7 +503,7 @@
 
   <rect x="2000" y="1410" width="350" height="310" fill="#0f1219" stroke="#334155" stroke-width="2" rx="8"/>
 
-  <text x="2175" y="1440" font-size="16" font-weight="bold" text-anchor="middle" fill="#e0e7ff">Legend & Key Stats</text>
+  <text x="2175" y="1440" font-size="16" font-weight="bold" text-anchor="middle" fill="#e0e7ff">Legend &amp; Key Stats</text>
   <line x1="2010" y1="1455" x2="2340" y2="1455" stroke="#334155" stroke-width="1"/>
 
   <!-- Color codes -->
@@ -514,7 +514,7 @@
   <text x="2045" y="1503" font-size="11" fill="#cbd5e1">Security (green)</text>
 
   <rect x="2020" y="1520" width="12" height="12" fill="#d97706"/>
-  <text x="2045" y="1528" font-size="11" fill="#cbd5e1">Tools & Plugins (orange)</text>
+  <text x="2045" y="1528" font-size="11" fill="#cbd5e1">Tools &amp; Plugins (orange)</text>
 
   <rect x="2020" y="1545" width="12" height="12" fill="#7c3aed"/>
   <text x="2045" y="1553" font-size="11" fill="#cbd5e1">Agents (purple)</text>
@@ -526,7 +526,7 @@
   <text x="2045" y="1603" font-size="11" fill="#cbd5e1">UI Layer (pink)</text>
 
   <rect x="2020" y="1620" width="12" height="12" fill="#ca8a04"/>
-  <text x="2045" y="1628" font-size="11" fill="#cbd5e1">Memory & Storage (yellow)</text>
+  <text x="2045" y="1628" font-size="11" fill="#cbd5e1">Memory &amp; Storage (yellow)</text>
 
   <!-- Key Stats -->
   <line x1="2010" y1="1645" x2="2340" y2="1645" stroke="#334155" stroke-width="1"/>
