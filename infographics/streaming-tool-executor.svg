@@ -1,2 +1,78 @@
 <?xml version='1.0' encoding='utf-8'?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 800" width="1000" height="800"><defs><filter id="dropshadow" x="-50%" y="-50%" width="200%" height="200%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.1" /></filter><marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><polygon points="0 0, 10 3, 0 6" fill="#94A3B8" /></marker></defs><rect width="100%" height="100%" fill="#ffffff" /><text x="500" y="40" font-family="Inter, system-ui, sans-serif" font-size="24" font-weight="bold" fill="#1a1a2e" text-anchor="middle">Streaming Tool Executor</text><rect x="380" y="100" width="240" height="80" fill="#EBF5FF" stroke="#3B82F6" stroke-width="2" rx="8" filter="url(#dropshadow)" /><text x="500.0" y="120" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#3B82F6" text-anchor="middle">Model Streaming</text><text x="500.0" y="142" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="normal" fill="#666666" text-anchor="middle">Tokens arriving from API</text><line x1="500" y1="180" x2="500" y2="200" stroke="#94A3B8" stroke-width="2" marker-end="url(#arrowhead)" /><rect x="360" y="200" width="280" height="80" fill="#ECFDF5" stroke="#10B981" stroke-width="2" rx="8" filter="url(#dropshadow)" /><text x="500.0" y="220" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#10B981" text-anchor="middle">Tool Use Detected</text><text x="500.0" y="242" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="normal" fill="#666666" text-anchor="middle">Parse tool_use content block</text><line x1="500" y1="280" x2="500" y2="300" stroke="#94A3B8" stroke-width="2" marker-end="url(#arrowhead)" /><rect x="380" y="300" width="240" height="80" fill="#ECFDF5" stroke="#10B981" stroke-width="2" rx="8" filter="url(#dropshadow)" /><text x="500.0" y="320" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#10B981" text-anchor="middle">Queue</text><text x="500.0" y="342" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="normal" fill="#666666" text-anchor="middle">Added to tool execution queue</text><line x1="500" y1="380" x2="500" y2="400" stroke="#94A3B8" stroke-width="2" marker-end="url(#arrowhead)" /><polygon points="500,390 540,430 500,470 460,430" fill="#FFF7ED" stroke="#F97316" stroke-width="2" filter="url(#dropshadow)" /><text x="500" y="430" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="bold" fill="#F97316" text-anchor="middle">Safe?</text><line x1="460" y1="430" x2="350" y2="430" stroke="#94A3B8" stroke-width="2" marker-end="url(#arrowhead)" /><rect x="220" y="390" width="260" height="80" fill="#FFF7ED" stroke="#F97316" stroke-width="2" rx="8" filter="url(#dropshadow)" /><text x="350.0" y="410" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#F97316" text-anchor="middle">Wait for Queue</text><text x="350.0" y="432" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="normal" fill="#666666" text-anchor="middle">Bash, Edit, Write</text><line x1="540" y1="430" x2="650" y2="430" stroke="#94A3B8" stroke-width="2" marker-end="url(#arrowhead)" /><rect x="590" y="390" width="260" height="80" fill="#ECFDF5" stroke="#10B981" stroke-width="2" rx="8" filter="url(#dropshadow)" /><text x="720.0" y="410" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#10B981" text-anchor="middle">Execute Parallel</text><text x="720.0" y="432" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="normal" fill="#666666" text-anchor="middle">Read, Glob, Grep (concurrent)</text><line x1="350" y1="450" x2="500" y2="500" stroke="#94A3B8" stroke-width="2" marker-end="url(#arrowhead)" /><line x1="650" y1="450" x2="500" y2="500" stroke="#94A3B8" stroke-width="2" marker-end="url(#arrowhead)" /><rect x="360" y="500" width="280" height="80" fill="#FFF7ED" stroke="#F97316" stroke-width="2" rx="8" filter="url(#dropshadow)" /><text x="500.0" y="520" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#F97316" text-anchor="middle">Tool Results Yielded</text><text x="500.0" y="542" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="normal" fill="#666666" text-anchor="middle">-&gt; Agent Loop (next iteration)</text><rect x="50" y="200" width="180" height="120" fill="#FEF2F2" stroke="#EF4444" stroke-width="2" rx="8" filter="url(#dropshadow)" /><text x="140.0" y="220" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#EF4444" text-anchor="middle">Abort Controller</text><text x="140.0" y="242" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="normal" fill="#666666" text-anchor="middle">Root -&gt; Child per Tool</text><text x="140.0" y="258" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="normal" fill="#666666" text-anchor="middle">Bubble-up on failure</text><text x="140.0" y="274" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="normal" fill="#666666" text-anchor="middle">Cancels siblings</text><rect x="770" y="200" width="180" height="120" fill="#ECFEFF" stroke="#06B6D4" stroke-width="2" rx="8" filter="url(#dropshadow)" /><text x="860.0" y="220" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#06B6D4" text-anchor="middle">Status Lifecycle</text><text x="860.0" y="242" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="normal" fill="#666666" text-anchor="middle">queued -&gt; executing</text><text x="860.0" y="258" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="normal" fill="#666666" text-anchor="middle">-&gt; completed</text><text x="860.0" y="274" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="normal" fill="#666666" text-anchor="middle">getRemainingResults()</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 680" width="1000" height="680">
+  <defs>
+    <filter id="dropshadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.1"/>
+    </filter>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#94A3B8"/>
+    </marker>
+  </defs>
+  <rect width="100%" height="100%" fill="#ffffff"/>
+
+  <text x="500" y="40" font-family="Inter, system-ui, sans-serif" font-size="24" font-weight="bold" fill="#1a1a2e" text-anchor="middle">Streaming Tool Executor</text>
+
+  <!-- Model Streaming -->
+  <rect x="380" y="70" width="240" height="60" fill="#EBF5FF" stroke="#3B82F6" stroke-width="2" rx="8" filter="url(#dropshadow)"/>
+  <text x="500" y="95" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#3B82F6" text-anchor="middle">Model Streaming</text>
+  <text x="500" y="115" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="normal" fill="#666666" text-anchor="middle">Tokens arriving from API</text>
+
+  <line x1="500" y1="130" x2="500" y2="150" stroke="#94A3B8" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+  <!-- Tool Use Detected -->
+  <rect x="370" y="150" width="260" height="60" fill="#ECFDF5" stroke="#10B981" stroke-width="2" rx="8" filter="url(#dropshadow)"/>
+  <text x="500" y="175" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#10B981" text-anchor="middle">Tool Use Detected</text>
+  <text x="500" y="195" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="normal" fill="#666666" text-anchor="middle">Parse tool_use content block</text>
+
+  <line x1="500" y1="210" x2="500" y2="230" stroke="#94A3B8" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+  <!-- Queue -->
+  <rect x="390" y="230" width="220" height="60" fill="#ECFDF5" stroke="#10B981" stroke-width="2" rx="8" filter="url(#dropshadow)"/>
+  <text x="500" y="255" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#10B981" text-anchor="middle">Queue</text>
+  <text x="500" y="275" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="normal" fill="#666666" text-anchor="middle">Added to tool execution queue</text>
+
+  <line x1="500" y1="290" x2="500" y2="330" stroke="#94A3B8" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+  <!-- Safe? diamond - bigger with more space -->
+  <polygon points="500,330 550,380 500,430 450,380" fill="#FFF7ED" stroke="#F97316" stroke-width="2" filter="url(#dropshadow)"/>
+  <text x="500" y="383" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="bold" fill="#F97316" text-anchor="middle">Safe?</text>
+
+  <!-- Left: Wait for Queue (drawn BEFORE arrow so arrow is visible on top) -->
+  <rect x="80" y="345" width="220" height="70" fill="#FFF7ED" stroke="#F97316" stroke-width="2" rx="8" filter="url(#dropshadow)"/>
+  <text x="190" y="370" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#F97316" text-anchor="middle">Wait for Queue</text>
+  <text x="190" y="390" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="normal" fill="#666666" text-anchor="middle">Bash, Edit, Write</text>
+  <!-- Arrow from diamond left to Wait for Queue -->
+  <line x1="450" y1="380" x2="300" y2="380" stroke="#94A3B8" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+  <!-- Right: Execute Parallel (drawn BEFORE arrow) -->
+  <rect x="700" y="345" width="240" height="70" fill="#ECFDF5" stroke="#10B981" stroke-width="2" rx="8" filter="url(#dropshadow)"/>
+  <text x="820" y="370" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#10B981" text-anchor="middle">Execute Parallel</text>
+  <text x="820" y="390" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="normal" fill="#666666" text-anchor="middle">Read, Glob, Grep (concurrent)</text>
+  <!-- Arrow from diamond right to Execute Parallel -->
+  <line x1="550" y1="380" x2="700" y2="380" stroke="#94A3B8" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+  <!-- Converging arrows - gentle curve via vertical drop then horizontal -->
+  <line x1="190" y1="415" x2="190" y2="490" stroke="#94A3B8" stroke-width="2"/>
+  <line x1="190" y1="490" x2="360" y2="490" stroke="#94A3B8" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="820" y1="415" x2="820" y2="490" stroke="#94A3B8" stroke-width="2"/>
+  <line x1="820" y1="490" x2="640" y2="490" stroke="#94A3B8" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+  <!-- Tool Results Yielded -->
+  <rect x="360" y="470" width="280" height="60" fill="#FFF7ED" stroke="#F97316" stroke-width="2" rx="8" filter="url(#dropshadow)"/>
+  <text x="500" y="495" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#F97316" text-anchor="middle">Tool Results Yielded</text>
+  <text x="500" y="515" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="normal" fill="#666666" text-anchor="middle">-&gt; Agent Loop (next iteration)</text>
+
+  <!-- Abort Controller (side panel) -->
+  <rect x="50" y="120" width="180" height="120" fill="#FEF2F2" stroke="#EF4444" stroke-width="2" rx="8" filter="url(#dropshadow)"/>
+  <text x="140" y="145" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#EF4444" text-anchor="middle">Abort Controller</text>
+  <text x="140" y="167" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="normal" fill="#666666" text-anchor="middle">Root -&gt; Child per Tool</text>
+  <text x="140" y="183" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="normal" fill="#666666" text-anchor="middle">Bubble-up on failure</text>
+  <text x="140" y="199" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="normal" fill="#666666" text-anchor="middle">Cancels siblings</text>
+
+  <!-- Status Lifecycle (side panel) -->
+  <rect x="770" y="120" width="180" height="120" fill="#ECFEFF" stroke="#06B6D4" stroke-width="2" rx="8" filter="url(#dropshadow)"/>
+  <text x="860" y="145" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#06B6D4" text-anchor="middle">Status Lifecycle</text>
+  <text x="860" y="167" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="normal" fill="#666666" text-anchor="middle">queued -&gt; executing</text>
+  <text x="860" y="183" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="normal" fill="#666666" text-anchor="middle">-&gt; completed</text>
+  <text x="860" y="199" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="normal" fill="#666666" text-anchor="middle">getRemainingResults()</text>
+</svg>

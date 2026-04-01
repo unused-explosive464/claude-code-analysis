@@ -1,4 +1,4 @@
-<svg width="1400" height="1000" viewBox="0 0 1400 1000" xmlns="http://www.w3.org/2000/svg">
+<svg width="1400" height="780" viewBox="0 0 1400 780" xmlns="http://www.w3.org/2000/svg">
 
     <defs>
         <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
@@ -8,6 +8,7 @@
             <polygon points="0 0, 10 3, 0 6" fill="#94A3B8"/>
         </marker>
     </defs>
+    <rect width="100%" height="100%" fill="#ffffff"/>
     <text x="700" y="40" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#3B82F6">Command Dispatch Pipeline</text>
     <text x="60" y="100" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#3B82F6">Input Parse</text>
     <rect x="60" y="130" width="220" height="70" rx="12" fill="#EBF5FF" stroke="#3B82F6" stroke-width="2" filter="url(#shadow)"/>
@@ -30,6 +31,7 @@
     <text x="920.0" y="155" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#1a1a2e">Match</text>
     <text x="920.0" y="175" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#333333">name equals input</text>
     <text x="920.0" y="191" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#333333">aliases check</text>
+    <line x1="500" y1="200" x2="500" y2="250" stroke="#94A3B8" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#arrowhead)"/>
     <text x="60" y="250" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#F97316">Filter Chain (5 Stages)</text>
     <rect x="60" y="290" width="130" height="50" rx="12" fill="#FFF7ED" stroke="#F97316" stroke-width="2" filter="url(#shadow)"/>
     <text x="125.0" y="315" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#1a1a2e">isEnabled()</text>
@@ -45,6 +47,7 @@
     <line x1="720" y1="315" x2="740" y2="315" stroke="#94A3B8" stroke-width="2" stroke-dasharray="none" marker-end="url(#arrowhead)"/>
     <rect x="760" y="290" width="130" height="50" rx="12" fill="#FFF7ED" stroke="#F97316" stroke-width="2" filter="url(#shadow)"/>
     <text x="825.0" y="315" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#1a1a2e">Permission</text>
+    <line x1="500" y1="340" x2="500" y2="420" stroke="#94A3B8" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#arrowhead)"/>
     <text x="60" y="420" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#3B82F6">Type Dispatch (3 Paths)</text>
     <rect x="60" y="460" width="200" height="100" rx="12" fill="#ECFDF5" stroke="#10B981" stroke-width="2" filter="url(#shadow)"/>
     <text x="160.0" y="485" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#1a1a2e">Type: prompt</text>
@@ -61,6 +64,7 @@
     <text x="660.0" y="505" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#333333">React component</text>
     <text x="660.0" y="521" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#333333">Render as modal</text>
     <text x="660.0" y="537" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#333333">ALWAYS BLOCKED</text>
+    <line x1="410" y1="560" x2="410" y2="630" stroke="#94A3B8" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#arrowhead)"/>
     <text x="60" y="630" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#10B981">21 Approved Local Commands</text>
     <rect x="60" y="660" width="1280" height="80" rx="8" fill="#ECFDF5" stroke="#10B981" stroke-width="2" filter="url(#shadow)"/>
     <text x="700" y="685" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#333333">Git: commit, push, pr | Shell: bash, node, python | File: read, write, edit</text>

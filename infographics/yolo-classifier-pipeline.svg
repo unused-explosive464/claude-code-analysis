@@ -1,2 +1,85 @@
 <?xml version='1.0' encoding='utf-8'?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 850" width="1100" height="850"><defs><filter id="dropshadow" x="-50%" y="-50%" width="200%" height="200%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.1" /></filter><marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><polygon points="0 0, 10 3, 0 6" fill="#94A3B8" /></marker></defs><rect width="100%" height="100%" fill="#ffffff" /><text x="550" y="40" font-family="Inter, system-ui, sans-serif" font-size="22" font-weight="bold" fill="#1a1a2e" text-anchor="middle">YOLO Classifier Pipeline (Two-Stage)</text><rect x="420" y="100" width="260" height="80" fill="#EBF5FF" stroke="#3B82F6" stroke-width="2" rx="8" filter="url(#dropshadow)" /><text x="550.0" y="120" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#3B82F6" text-anchor="middle">Input</text><text x="550.0" y="142" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="normal" fill="#666666" text-anchor="middle">Tool Call from Agent</text><line x1="550" y1="180" x2="550" y2="200" stroke="#94A3B8" stroke-width="2" marker-end="url(#arrowhead)" /><rect x="410" y="200" width="280" height="90" fill="#ECFDF5" stroke="#10B981" stroke-width="2" rx="8" filter="url(#dropshadow)" /><text x="550.0" y="220" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#10B981" text-anchor="middle">Stage 1: Fast Path</text><text x="550.0" y="242" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="normal" fill="#666666" text-anchor="middle">max_tokens = 64</text><text x="550.0" y="258" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="normal" fill="#666666" text-anchor="middle">stop = &lt;/block&gt;</text><text x="550.0" y="274" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="normal" fill="#666666" text-anchor="middle">Err on side of blocking</text><line x1="550" y1="290" x2="550" y2="310" stroke="#94A3B8" stroke-width="2" marker-end="url(#arrowhead)" /><polygon points="550,310 585,345 550,380 515,345" fill="#FFF7ED" stroke="#F97316" stroke-width="2" filter="url(#dropshadow)" /><text x="550" y="345" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="bold" fill="#F97316" text-anchor="middle">&lt;block&gt;?</text><line x1="515" y1="345" x2="400" y2="345" stroke="#94A3B8" stroke-width="2" marker-end="url(#arrowhead)" /><rect x="422.5" y="335.0" width="70" height="20" fill="#ffffff" stroke="#9CA3AF" stroke-width="1" rx="3" /><text x="457.5" y="349.0" font-family="Inter, system-ui, sans-serif" font-size="10" font-weight="normal" fill="#666666" text-anchor="middle">NO</text><rect x="270" y="310" width="260" height="70" fill="#ECFDF5" stroke="#10B981" stroke-width="2" rx="8" filter="url(#dropshadow)" /><text x="400.0" y="330" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#10B981" text-anchor="middle">ALLOW</text><text x="400.0" y="352" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="normal" fill="#666666" text-anchor="middle">(fast path)</text><line x1="550" y1="345" x2="550" y2="420" stroke="#94A3B8" stroke-width="2" marker-end="url(#arrowhead)" /><rect x="515.0" y="372.5" width="70" height="20" fill="#ffffff" stroke="#9CA3AF" stroke-width="1" rx="3" /><text x="550.0" y="386.5" font-family="Inter, system-ui, sans-serif" font-size="10" font-weight="normal" fill="#666666" text-anchor="middle">YES</text><rect x="410" y="420" width="280" height="110" fill="#EBF5FF" stroke="#3B82F6" stroke-width="2" rx="8" filter="url(#dropshadow)" /><text x="550.0" y="440" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#3B82F6" text-anchor="middle">Stage 2: Thinking</text><text x="550.0" y="462" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="normal" fill="#666666" text-anchor="middle">max_tokens = 4,096</text><text x="550.0" y="478" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="normal" fill="#666666" text-anchor="middle">No stop_sequences</text><text x="550.0" y="494" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="normal" fill="#666666" text-anchor="middle">Uses &lt;thinking&gt; tags</text><text x="550.0" y="510" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="normal" fill="#666666" text-anchor="middle">Shares Stage 1 cache</text><line x1="550" y1="530" x2="550" y2="550" stroke="#94A3B8" stroke-width="2" marker-end="url(#arrowhead)" /><polygon points="550,545 585,580 550,615 515,580" fill="#FFF7ED" stroke="#F97316" stroke-width="2" filter="url(#dropshadow)" /><text x="550" y="580" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="bold" fill="#F97316" text-anchor="middle">Final</text><line x1="515" y1="580" x2="420" y2="580" stroke="#94A3B8" stroke-width="2" marker-end="url(#arrowhead)" /><rect x="432.5" y="570.0" width="70" height="20" fill="#ffffff" stroke="#9CA3AF" stroke-width="1" rx="3" /><text x="467.5" y="584.0" font-family="Inter, system-ui, sans-serif" font-size="10" font-weight="normal" fill="#666666" text-anchor="middle">ALLOW</text><rect x="290" y="550" width="230" height="60" fill="#ECFDF5" stroke="#10B981" stroke-width="2" rx="8" filter="url(#dropshadow)" /><text x="405.0" y="570" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#10B981" text-anchor="middle">ALLOW</text><line x1="585" y1="580" x2="680" y2="580" stroke="#94A3B8" stroke-width="2" marker-end="url(#arrowhead)" /><rect x="597.5" y="570.0" width="70" height="20" fill="#ffffff" stroke="#9CA3AF" stroke-width="1" rx="3" /><text x="632.5" y="584.0" font-family="Inter, system-ui, sans-serif" font-size="10" font-weight="normal" fill="#666666" text-anchor="middle">BLOCK</text><rect x="650" y="550" width="230" height="60" fill="#FEF2F2" stroke="#EF4444" stroke-width="2" rx="8" filter="url(#dropshadow)" /><text x="765.0" y="570" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#EF4444" text-anchor="middle">BLOCK</text><rect x="50" y="200" width="200" height="180" fill="#FEF2F2" stroke="#EF4444" stroke-width="2" rx="8" filter="url(#dropshadow)" /><text x="150.0" y="220" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#EF4444" text-anchor="middle">Error Handling</text><text x="150.0" y="242" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="normal" fill="#666666" text-anchor="middle">Parse Fail -&gt; Block</text><text x="150.0" y="258" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="normal" fill="#666666" text-anchor="middle">API Error -&gt; Block</text><text x="150.0" y="274" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="normal" fill="#666666" text-anchor="middle">Too Long -&gt; transcriptTooLong</text><rect x="850" y="200" width="200" height="180" fill="#F9FAFB" stroke="#9CA3AF" stroke-width="2" rx="8" filter="url(#dropshadow)" /><text x="950.0" y="220" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#9CA3AF" text-anchor="middle">Performance</text><text x="950.0" y="242" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="normal" fill="#666666" text-anchor="middle">Fast Path: low latency</text><text x="950.0" y="258" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="normal" fill="#666666" text-anchor="middle">Escalation: cache reuse</text><text x="950.0" y="274" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="normal" fill="#666666" text-anchor="middle">Stage 2 reuses Stage 1</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 720" width="1100" height="720">
+  <defs>
+    <filter id="dropshadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.1"/>
+    </filter>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#94A3B8"/>
+    </marker>
+  </defs>
+  <rect width="100%" height="100%" fill="#ffffff"/>
+
+  <text x="550" y="40" font-family="Inter, system-ui, sans-serif" font-size="22" font-weight="bold" fill="#1a1a2e" text-anchor="middle">YOLO Classifier Pipeline (Two-Stage)</text>
+
+  <!-- Input -->
+  <rect x="430" y="70" width="240" height="60" fill="#EBF5FF" stroke="#3B82F6" stroke-width="2" rx="8" filter="url(#dropshadow)"/>
+  <text x="550" y="95" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#3B82F6" text-anchor="middle">Input</text>
+  <text x="550" y="115" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="normal" fill="#666666" text-anchor="middle">Tool Call from Agent</text>
+
+  <line x1="550" y1="130" x2="550" y2="150" stroke="#94A3B8" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+  <!-- Stage 1: Fast Path -->
+  <rect x="420" y="150" width="260" height="90" fill="#ECFDF5" stroke="#10B981" stroke-width="2" rx="8" filter="url(#dropshadow)"/>
+  <text x="550" y="175" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#10B981" text-anchor="middle">Stage 1: Fast Path</text>
+  <text x="550" y="197" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="normal" fill="#666666" text-anchor="middle">max_tokens = 64</text>
+  <text x="550" y="213" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="normal" fill="#666666" text-anchor="middle">stop = &lt;/block&gt;</text>
+  <text x="550" y="229" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="normal" fill="#666666" text-anchor="middle">Err on side of blocking</text>
+
+  <line x1="550" y1="240" x2="550" y2="270" stroke="#94A3B8" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+  <!-- block? diamond - bigger (50px radius) -->
+  <polygon points="550,270 600,320 550,370 500,320" fill="#FFF7ED" stroke="#F97316" stroke-width="2" filter="url(#dropshadow)"/>
+  <text x="550" y="324" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="bold" fill="#F97316" text-anchor="middle">&lt;block&gt;?</text>
+
+  <!-- NO arrow left -> ALLOW (fast path) -->
+  <line x1="500" y1="320" x2="350" y2="320" stroke="#94A3B8" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="425" y="310" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#666666" text-anchor="middle">NO</text>
+  <rect x="180" y="290" width="170" height="60" fill="#ECFDF5" stroke="#10B981" stroke-width="2" rx="8" filter="url(#dropshadow)"/>
+  <text x="265" y="315" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#10B981" text-anchor="middle">ALLOW</text>
+  <text x="265" y="335" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="normal" fill="#666666" text-anchor="middle">(fast path)</text>
+
+  <!-- YES arrow down -> Stage 2 -->
+  <line x1="550" y1="370" x2="550" y2="400" stroke="#94A3B8" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="570" y="390" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#666666">YES</text>
+
+  <!-- Stage 2: Thinking -->
+  <rect x="420" y="400" width="260" height="110" fill="#EBF5FF" stroke="#3B82F6" stroke-width="2" rx="8" filter="url(#dropshadow)"/>
+  <text x="550" y="425" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#3B82F6" text-anchor="middle">Stage 2: Thinking</text>
+  <text x="550" y="447" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="normal" fill="#666666" text-anchor="middle">max_tokens = 4,096</text>
+  <text x="550" y="463" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="normal" fill="#666666" text-anchor="middle">No stop_sequences</text>
+  <text x="550" y="479" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="normal" fill="#666666" text-anchor="middle">Uses &lt;thinking&gt; tags</text>
+  <text x="550" y="495" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="normal" fill="#666666" text-anchor="middle">Shares Stage 1 cache</text>
+
+  <line x1="550" y1="510" x2="550" y2="540" stroke="#94A3B8" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+  <!-- Final diamond - bigger (50px radius) -->
+  <polygon points="550,540 600,590 550,640 500,590" fill="#FFF7ED" stroke="#F97316" stroke-width="2" filter="url(#dropshadow)"/>
+  <text x="550" y="594" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="bold" fill="#F97316" text-anchor="middle">Final</text>
+
+  <!-- ALLOW arrow left -->
+  <line x1="500" y1="590" x2="350" y2="590" stroke="#94A3B8" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="425" y="580" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#666666" text-anchor="middle">ALLOW</text>
+  <rect x="180" y="560" width="170" height="60" fill="#ECFDF5" stroke="#10B981" stroke-width="2" rx="8" filter="url(#dropshadow)"/>
+  <text x="265" y="595" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#10B981" text-anchor="middle">ALLOW</text>
+
+  <!-- BLOCK arrow right -->
+  <line x1="600" y1="590" x2="750" y2="590" stroke="#94A3B8" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="675" y="580" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#666666" text-anchor="middle">BLOCK</text>
+  <rect x="750" y="560" width="170" height="60" fill="#FEF2F2" stroke="#EF4444" stroke-width="2" rx="8" filter="url(#dropshadow)"/>
+  <text x="835" y="595" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#EF4444" text-anchor="middle">BLOCK</text>
+
+  <!-- Error Handling (side panel) -->
+  <rect x="50" y="150" width="200" height="120" fill="#FEF2F2" stroke="#EF4444" stroke-width="2" rx="8" filter="url(#dropshadow)"/>
+  <text x="150" y="175" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#EF4444" text-anchor="middle">Error Handling</text>
+  <text x="150" y="197" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="normal" fill="#666666" text-anchor="middle">Parse Fail -&gt; Block</text>
+  <text x="150" y="213" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="normal" fill="#666666" text-anchor="middle">API Error -&gt; Block</text>
+  <text x="150" y="229" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="normal" fill="#666666" text-anchor="middle">Too Long -&gt; truncate</text>
+
+  <!-- Performance (side panel) -->
+  <rect x="850" y="150" width="200" height="120" fill="#F9FAFB" stroke="#9CA3AF" stroke-width="2" rx="8" filter="url(#dropshadow)"/>
+  <text x="950" y="175" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#9CA3AF" text-anchor="middle">Performance</text>
+  <text x="950" y="197" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="normal" fill="#666666" text-anchor="middle">Fast Path: low latency</text>
+  <text x="950" y="213" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="normal" fill="#666666" text-anchor="middle">Escalation: cache reuse</text>
+  <text x="950" y="229" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="normal" fill="#666666" text-anchor="middle">Stage 2 reuses Stage 1</text>
+</svg>

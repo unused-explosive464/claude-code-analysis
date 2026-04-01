@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 1500" width="1400px" height="1500px" style="background-color: #ffffff">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 1240" width="1400px" height="1240px" style="background-color: #ffffff">
   <defs>
     <filter id="dropShadow" x="-50%" y="-50%" width="200%" height="200%">
       <feOffset in="SourceGraphic" dx="0" dy="2"/>
@@ -26,6 +26,9 @@
     </marker>
     <marker id="arrowhead-red" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
       <polygon points="0 0, 10 3, 0 6" fill="#EF4444"/>
+    </marker>
+    <marker id="arrowhead-cyan" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#06B6D4"/>
     </marker>
   </defs>
   <text x="30" y="45" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#3B82F6">Context Compaction State Machine</text>

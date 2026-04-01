@@ -1,4 +1,5 @@
 <svg width="1400" height="2000" viewBox="0 0 1400 2000" xmlns="http://www.w3.org/2000/svg">
+    <rect width="100%" height="100%" fill="#ffffff"/>
 
     <defs>
         <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
@@ -30,6 +31,7 @@
     <text x="1255.0" y="165" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#1a1a2e">Config</text>
     <text x="1255.0" y="185" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#333333">1,850 LOC</text>
     <text x="1255.0" y="201" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#333333">60+ flags</text>
+    <line x1="700" y1="240" x2="700" y2="360" stroke="#94A3B8" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#arrowhead)"/>
     <text x="50" y="380" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#8B5CF6">UI and Rendering</text>
     <rect x="50" y="420" width="250" height="80" rx="12" fill="#F5F3FF" stroke="#8B5CF6" stroke-width="2" filter="url(#shadow)"/>
     <text x="175.0" y="445" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#1a1a2e">Ink Engine</text>
@@ -51,6 +53,7 @@
     <text x="1255.0" y="445" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#1a1a2e">Terminal</text>
     <text x="1255.0" y="465" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#333333">5,200 LOC</text>
     <text x="1255.0" y="481" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#333333">raw mode, mouse</text>
+    <line x1="700" y1="520" x2="700" y2="640" stroke="#94A3B8" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#arrowhead)"/>
     <text x="50" y="660" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#3B82F6">Core Engine</text>
     <rect x="50" y="700" width="250" height="80" rx="12" fill="#EBF5FF" stroke="#3B82F6" stroke-width="2" filter="url(#shadow)"/>
     <text x="175.0" y="725" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#1a1a2e">Query State Machine</text>
@@ -72,6 +75,7 @@
     <text x="1255.0" y="725" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#1a1a2e">Message Processing</text>
     <text x="1255.0" y="745" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#333333">3,800 LOC</text>
     <text x="1255.0" y="761" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#333333">parse, persist</text>
+    <line x1="700" y1="800" x2="700" y2="920" stroke="#94A3B8" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#arrowhead)"/>
     <text x="50" y="940" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#10B981">Security</text>
     <rect x="50" y="980" width="250" height="80" rx="12" fill="#ECFDF5" stroke="#10B981" stroke-width="2" filter="url(#shadow)"/>
     <text x="175.0" y="1005" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#1a1a2e">Permissions</text>
@@ -91,6 +95,7 @@
     <text x="1255.0" y="1005" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#1a1a2e">Audit Log</text>
     <text x="1255.0" y="1025" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#333333">2,200 LOC</text>
     <text x="1255.0" y="1041" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#333333">decisions, timeline</text>
+    <line x1="700" y1="1080" x2="700" y2="1200" stroke="#94A3B8" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#arrowhead)"/>
     <text x="50" y="1220" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#8B5CF6">Agent Orchestration</text>
     <rect x="50" y="1260" width="250" height="80" rx="12" fill="#F5F3FF" stroke="#8B5CF6" stroke-width="2" filter="url(#shadow)"/>
     <text x="175.0" y="1285" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#1a1a2e">Swarm Mode</text>
@@ -108,6 +113,7 @@
     <text x="985.0" y="1285" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#1a1a2e">Speculative Exec</text>
     <text x="985.0" y="1305" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#333333">980 LOC</text>
     <text x="985.0" y="1321" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#333333">copy-on-write</text>
+    <line x1="700" y1="1360" x2="700" y2="1480" stroke="#94A3B8" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#arrowhead)"/>
     <text x="50" y="1500" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#EAB308">Memory and State</text>
     <rect x="50" y="1540" width="250" height="80" rx="12" fill="#FEFCE8" stroke="#EAB308" stroke-width="2" filter="url(#shadow)"/>
     <text x="175.0" y="1565" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#1a1a2e">Memdir</text>
@@ -129,6 +135,7 @@
     <text x="1255.0" y="1565" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#1a1a2e">AppState</text>
     <text x="1255.0" y="1585" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#333333">4,100 LOC</text>
     <text x="1255.0" y="1601" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#333333">565+ reactive</text>
+    <line x1="700" y1="1640" x2="700" y2="1760" stroke="#94A3B8" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#arrowhead)"/>
     <text x="50" y="1780" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#F97316">Plugins and Tools</text>
     <rect x="50" y="1820" width="250" height="80" rx="12" fill="#FFF7ED" stroke="#F97316" stroke-width="2" filter="url(#shadow)"/>
     <text x="175.0" y="1845" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#1a1a2e">Plugin System</text>
@@ -146,7 +153,7 @@
     <rect x="1130" y="1820" width="250" height="80" rx="12" fill="#FFF7ED" stroke="#F97316" stroke-width="2" filter="url(#shadow)"/>
     <text x="1255.0" y="1845" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#1a1a2e">Web Fetch</text>
     <text x="1255.0" y="1865" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#333333">HTTP retry, DOM</text>
-    <rect x="50" y="2060" width="1300" height="60" rx="8" fill="#F9FAFB" stroke="#9CA3AF" stroke-width="2"/>
-    <text x="700" y="2100" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="middle" fill="#333333">1,902 TypeScript files | 423K LOC | 82 analysis docs</text>
+    <rect x="50" y="1930" width="1300" height="60" rx="8" fill="#F9FAFB" stroke="#9CA3AF" stroke-width="2"/>
+    <text x="700" y="1968" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="middle" fill="#333333">1,902 TypeScript files | 423K LOC | 82 analysis docs</text>
 
 </svg>

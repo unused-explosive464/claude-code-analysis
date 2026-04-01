@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 1400" width="1400px" height="1400px" style="background-color: #ffffff">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 1050" width="1500px" height="1050px" style="background-color: #ffffff">
   <defs>
     <filter id="dropShadow" x="-50%" y="-50%" width="200%" height="200%">
       <feOffset in="SourceGraphic" dx="0" dy="2"/>
@@ -28,76 +28,127 @@
       <polygon points="0 0, 10 3, 0 6" fill="#EF4444"/>
     </marker>
   </defs>
+
   <text x="40" y="45" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#06B6D4">Permission Engine &amp; YOLO Classifier</text>
-  <text x="40" y="100" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#06B6D4">Entry Point</text>
-  <rect x="30" y="130" width="400" height="100" rx="12" fill="#ECFEFF" stroke="#06B6D4" stroke-width="2" filter="url(#dropShadow)"/>
-  <text x="230" y="150" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1a1a2e">Tool Use Request</text>
-  <text x="45" y="172" font-family="Inter, system-ui, sans-serif" font-size="12" fill="#333333">{ toolName, parameters,</text>
-  <text x="45" y="188" font-family="Inter, system-ui, sans-serif" font-size="12" fill="#666666">context }</text>
-  <line x1="230" y1="230" x2="230" y2="280" stroke="#94A3B8" stroke-width="2" marker-end="url(#arrowhead-arrow)"/>
-  <text x="40" y="300" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#8B5CF6">Mode Selection</text>
-  <polygon points="150,320.0 190.0,360 150,400.0 110.0,360" fill="#FFF7ED" stroke="#F97316" stroke-width="2" filter="url(#dropShadow)"/>
-  <text x="150" y="365" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1a1a2e">Mode?</text>
-  <rect x="40" y="480" width="80" height="60" rx="12" fill="#F5F3FF" stroke="#8B5CF6" stroke-width="2" filter="url(#dropShadow)"/>
-  <text x="55" y="500" font-family="Inter, system-ui, sans-serif" font-size="12" fill="#333333">default</text>
-  <rect x="130" y="480" width="80" height="60" rx="12" fill="#F5F3FF" stroke="#8B5CF6" stroke-width="2" filter="url(#dropShadow)"/>
-  <text x="145" y="500" font-family="Inter, system-ui, sans-serif" font-size="12" fill="#333333">plan</text>
-  <rect x="220" y="480" width="80" height="60" rx="12" fill="#F5F3FF" stroke="#8B5CF6" stroke-width="2" filter="url(#dropShadow)"/>
-  <text x="235" y="500" font-family="Inter, system-ui, sans-serif" font-size="12" fill="#333333">acceptEdits</text>
-  <rect x="310" y="480" width="80" height="60" rx="12" fill="#F5F3FF" stroke="#8B5CF6" stroke-width="2" filter="url(#dropShadow)"/>
-  <text x="325" y="500" font-family="Inter, system-ui, sans-serif" font-size="12" fill="#333333">auto</text>
-  <rect x="40" y="560" width="340" height="100" rx="12" fill="#F5F3FF" stroke="#8B5CF6" stroke-width="2" filter="url(#dropShadow)"/>
-  <text x="210" y="580" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1a1a2e">Feature Gates</text>
-  <text x="55" y="602" font-family="Inter, system-ui, sans-serif" font-size="12" fill="#333333">tengu_disable_bypass</text>
-  <text x="55" y="618" font-family="Inter, system-ui, sans-serif" font-size="12" fill="#666666">killswitch, iron_gate,</text>
-  <text x="55" y="634" font-family="Inter, system-ui, sans-serif" font-size="12" fill="#666666">circuitBreaker</text>
-  <text x="450" y="300" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#F97316">Rule Evaluation</text>
-  <rect x="430" y="330" width="340" height="90" rx="12" fill="#FFF7ED" stroke="#F97316" stroke-width="2" filter="url(#dropShadow)"/>
-  <text x="600" y="350" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1a1a2e">Load Rules Cascade</text>
-  <text x="445" y="372" font-family="Inter, system-ui, sans-serif" font-size="12" fill="#333333">project -&gt; global -&gt; managed</text>
-  <rect x="430" y="440" width="340" height="110" rx="12" fill="#ECFEFF" stroke="#06B6D4" stroke-width="2" filter="url(#dropShadow)"/>
-  <text x="600" y="460" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1a1a2e">Rule Format</text>
-  <text x="445" y="482" font-family="Inter, system-ui, sans-serif" font-size="12" fill="#333333">ToolName(ruleContent)</text>
-  <text x="445" y="498" font-family="Inter, system-ui, sans-serif" font-size="12" fill="#666666">Types: allow | deny | ask</text>
-  <polygon points="600,560.0 640.0,600 600,640.0 560.0,600" fill="#FFF7ED" stroke="#F97316" stroke-width="2" filter="url(#dropShadow)"/>
-  <text x="600" y="605" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1a1a2e">Match?</text>
-  <rect x="550" y="700" width="100" height="80" rx="12" fill="#ECFDF5" stroke="#10B981" stroke-width="2" filter="url(#dropShadow)"/>
-  <text x="565" y="720" font-family="Inter, system-ui, sans-serif" font-size="12" fill="#333333">Apply Rule</text>
-  <text x="850" y="300" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#3B82F6">YOLO Classifier</text>
-  <rect x="800" y="330" width="350" height="110" rx="12" fill="#EBF5FF" stroke="#3B82F6" stroke-width="2" filter="url(#dropShadow)"/>
-  <text x="975" y="350" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1a1a2e">Stage 1: Fast Path</text>
-  <text x="815" y="372" font-family="Inter, system-ui, sans-serif" font-size="12" fill="#333333">max_tokens = 64</text>
-  <text x="815" y="388" font-family="Inter, system-ui, sans-serif" font-size="12" fill="#666666">stop_sequences = ['&lt;/block&gt;']</text>
-  <text x="815" y="404" font-family="Inter, system-ui, sans-serif" font-size="12" fill="#666666">Temperature = 0</text>
-  <polygon points="975,460.0 1015.0,500 975,540.0 935.0,500" fill="#FFF7ED" stroke="#F97316" stroke-width="2" filter="url(#dropShadow)"/>
-  <text x="975" y="505" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1a1a2e">Contains?</text>
-  <rect x="1050" y="480" width="80" height="80" rx="12" fill="#ECFDF5" stroke="#10B981" stroke-width="2" filter="url(#dropShadow)"/>
-  <text x="1065" y="500" font-family="Inter, system-ui, sans-serif" font-size="12" fill="#333333">ALLOW</text>
-  <rect x="800" y="600" width="350" height="150" rx="12" fill="#EBF5FF" stroke="#3B82F6" stroke-width="2" filter="url(#dropShadow)"/>
-  <text x="975" y="620" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1a1a2e">Stage 2: Reasoning</text>
-  <text x="815" y="642" font-family="Inter, system-ui, sans-serif" font-size="12" fill="#333333">max_tokens = 4,096</text>
-  <text x="815" y="658" font-family="Inter, system-ui, sans-serif" font-size="12" fill="#666666">Parse &lt;decision&gt; tag</text>
-  <text x="815" y="674" font-family="Inter, system-ui, sans-serif" font-size="12" fill="#666666">Cache: 1h TTL</text>
-  <text x="815" y="690" font-family="Inter, system-ui, sans-serif" font-size="12" fill="#666666">60-80% hit rate</text>
-  <text x="1150" y="300" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#8B5CF6">Decision Paths</text>
-  <rect x="1110" y="330" width="270" height="60" rx="12" fill="#ECFDF5" stroke="#10B981" stroke-width="2" filter="url(#dropShadow)"/>
-  <text x="1125" y="350" font-family="Inter, system-ui, sans-serif" font-size="12" fill="#333333">Path 1: ALLOW</text>
-  <rect x="1110" y="400" width="270" height="60" rx="12" fill="#FEF2F2" stroke="#EF4444" stroke-width="2" filter="url(#dropShadow)"/>
-  <text x="1125" y="420" font-family="Inter, system-ui, sans-serif" font-size="12" fill="#333333">Path 2: DENY</text>
-  <rect x="1110" y="470" width="270" height="60" rx="12" fill="#FEFCE8" stroke="#EAB308" stroke-width="2" filter="url(#dropShadow)"/>
-  <text x="1125" y="490" font-family="Inter, system-ui, sans-serif" font-size="12" fill="#333333">Path 3: ASK</text>
-  <rect x="1110" y="540" width="270" height="60" rx="12" fill="#EBF5FF" stroke="#3B82F6" stroke-width="2" filter="url(#dropShadow)"/>
-  <text x="1125" y="560" font-family="Inter, system-ui, sans-serif" font-size="12" fill="#333333">Path 4: Auto Mode</text>
-  <rect x="1110" y="610" width="270" height="60" rx="12" fill="#EBF5FF" stroke="#3B82F6" stroke-width="2" filter="url(#dropShadow)"/>
-  <text x="1125" y="630" font-family="Inter, system-ui, sans-serif" font-size="12" fill="#333333">Path 5: Other Modes</text>
-  <rect x="1110" y="680" width="270" height="60" rx="12" fill="#FEF2F2" stroke="#EF4444" stroke-width="2" filter="url(#dropShadow)"/>
-  <text x="1125" y="700" font-family="Inter, system-ui, sans-serif" font-size="12" fill="#333333">Path 6: Circuit Break</text>
-  <text x="40" y="1180" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#06B6D4">Output</text>
-  <rect x="30" y="1210" width="600" height="100" rx="12" fill="#ECFEFF" stroke="#06B6D4" stroke-width="2" filter="url(#dropShadow)"/>
-  <text x="330" y="1230" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1a1a2e">PermissionResult</text>
-  <text x="45" y="1252" font-family="Inter, system-ui, sans-serif" font-size="12" fill="#333333">decision + reason + metadata</text>
-  <rect x="680" y="1210" width="300" height="100" rx="12" fill="#F9FAFB" stroke="#9CA3AF" stroke-width="2" filter="url(#dropShadow)"/>
-  <text x="830" y="1230" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1a1a2e">Telemetry</text>
-  <text x="695" y="1252" font-family="Inter, system-ui, sans-serif" font-size="12" fill="#333333">events, token usage,</text>
-  <text x="695" y="1268" font-family="Inter, system-ui, sans-serif" font-size="12" fill="#666666">latency</text>
+
+  <!-- ========== LEFT COLUMN: Entry + Mode Selection ========== -->
+  <text x="40" y="100" font-family="Inter, system-ui, sans-serif" font-size="18" font-weight="bold" fill="#06B6D4">Entry Point</text>
+  <rect x="30" y="120" width="380" height="90" rx="12" fill="#ECFEFF" stroke="#06B6D4" stroke-width="2" filter="url(#dropShadow)"/>
+  <text x="220" y="145" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1a1a2e">Tool Use Request</text>
+  <text x="45" y="167" font-family="Inter, system-ui, sans-serif" font-size="12" fill="#333333">{ toolName, parameters, context }</text>
+
+  <line x1="220" y1="210" x2="220" y2="250" stroke="#94A3B8" stroke-width="2" marker-end="url(#arrowhead-arrow)"/>
+
+  <text x="40" y="275" font-family="Inter, system-ui, sans-serif" font-size="18" font-weight="bold" fill="#8B5CF6">Mode Selection</text>
+  <polygon points="150,295 195,340 150,385 105,340" fill="#FFF7ED" stroke="#F97316" stroke-width="2" filter="url(#dropShadow)"/>
+  <text x="150" y="344" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1a1a2e">Mode?</text>
+
+  <!-- Mode boxes -->
+  <rect x="40" y="410" width="80" height="40" rx="8" fill="#F5F3FF" stroke="#8B5CF6" stroke-width="2" filter="url(#dropShadow)"/>
+  <text x="80" y="435" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#333333">default</text>
+  <rect x="130" y="410" width="80" height="40" rx="8" fill="#F5F3FF" stroke="#8B5CF6" stroke-width="2" filter="url(#dropShadow)"/>
+  <text x="170" y="435" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#333333">plan</text>
+  <rect x="220" y="410" width="80" height="40" rx="8" fill="#F5F3FF" stroke="#8B5CF6" stroke-width="2" filter="url(#dropShadow)"/>
+  <text x="260" y="435" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#333333">acceptEdits</text>
+  <rect x="310" y="410" width="80" height="40" rx="8" fill="#F5F3FF" stroke="#8B5CF6" stroke-width="2" filter="url(#dropShadow)"/>
+  <text x="350" y="435" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#333333">auto</text>
+
+  <!-- Feature Gates -->
+  <rect x="40" y="470" width="370" height="90" rx="12" fill="#F5F3FF" stroke="#8B5CF6" stroke-width="2" filter="url(#dropShadow)"/>
+  <text x="225" y="495" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1a1a2e">Feature Gates</text>
+  <text x="55" y="517" font-family="Inter, system-ui, sans-serif" font-size="12" fill="#333333">tengu_disable_bypass</text>
+  <text x="55" y="535" font-family="Inter, system-ui, sans-serif" font-size="12" fill="#666666">killswitch, iron_gate, circuitBreaker</text>
+
+  <!-- Mode -> Rule Evaluation arrow -->
+  <line x1="195" y1="340" x2="430" y2="340" stroke="#94A3B8" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#arrowhead-arrow)"/>
+
+  <!-- ========== MIDDLE COLUMN: Rule Evaluation ========== -->
+  <text x="450" y="275" font-family="Inter, system-ui, sans-serif" font-size="18" font-weight="bold" fill="#F97316">Rule Evaluation</text>
+  <rect x="430" y="295" width="300" height="70" rx="12" fill="#FFF7ED" stroke="#F97316" stroke-width="2" filter="url(#dropShadow)"/>
+  <text x="580" y="320" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1a1a2e">Load Rules Cascade</text>
+  <text x="445" y="345" font-family="Inter, system-ui, sans-serif" font-size="12" fill="#333333">project -&gt; global -&gt; managed</text>
+
+  <line x1="580" y1="365" x2="580" y2="385" stroke="#94A3B8" stroke-width="2" marker-end="url(#arrowhead-arrow)"/>
+
+  <rect x="430" y="385" width="300" height="80" rx="12" fill="#ECFEFF" stroke="#06B6D4" stroke-width="2" filter="url(#dropShadow)"/>
+  <text x="580" y="410" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1a1a2e">Rule Format</text>
+  <text x="445" y="432" font-family="Inter, system-ui, sans-serif" font-size="12" fill="#333333">ToolName(ruleContent)</text>
+  <text x="445" y="450" font-family="Inter, system-ui, sans-serif" font-size="12" fill="#666666">Types: allow | deny | ask</text>
+
+  <line x1="580" y1="465" x2="580" y2="490" stroke="#94A3B8" stroke-width="2" marker-end="url(#arrowhead-arrow)"/>
+
+  <!-- Match? diamond -->
+  <polygon points="580,490 625,535 580,580 535,535" fill="#FFF7ED" stroke="#F97316" stroke-width="2" filter="url(#dropShadow)"/>
+  <text x="580" y="540" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1a1a2e">Match?</text>
+
+  <!-- Match Yes -> Apply Rule -->
+  <line x1="580" y1="580" x2="580" y2="620" stroke="#10B981" stroke-width="2" marker-end="url(#arrowhead-green)"/>
+  <text x="595" y="605" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#10B981">Yes</text>
+  <rect x="520" y="620" width="120" height="50" rx="12" fill="#ECFDF5" stroke="#10B981" stroke-width="2" filter="url(#dropShadow)"/>
+  <text x="580" y="650" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#10B981">Apply Rule</text>
+
+  <!-- Match No -> YOLO arrow -->
+  <line x1="625" y1="535" x2="770" y2="535" stroke="#94A3B8" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#arrowhead-arrow)"/>
+  <text x="700" y="525" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#666666" text-anchor="middle">No match</text>
+
+  <!-- ========== RIGHT COLUMN: YOLO Classifier ========== -->
+  <text x="800" y="275" font-family="Inter, system-ui, sans-serif" font-size="18" font-weight="bold" fill="#3B82F6">YOLO Classifier</text>
+
+  <rect x="770" y="295" width="280" height="100" rx="12" fill="#EBF5FF" stroke="#3B82F6" stroke-width="2" filter="url(#dropShadow)"/>
+  <text x="910" y="320" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1a1a2e">Stage 1: Fast Path</text>
+  <text x="785" y="342" font-family="Inter, system-ui, sans-serif" font-size="12" fill="#333333">max_tokens = 64</text>
+  <text x="785" y="360" font-family="Inter, system-ui, sans-serif" font-size="12" fill="#666666">stop_sequences = ['&lt;/block&gt;']</text>
+  <text x="785" y="378" font-family="Inter, system-ui, sans-serif" font-size="12" fill="#666666">Temperature = 0</text>
+
+  <line x1="910" y1="395" x2="910" y2="430" stroke="#94A3B8" stroke-width="2" marker-end="url(#arrowhead-arrow)"/>
+
+  <!-- Contains? diamond -->
+  <polygon points="910,430 955,475 910,520 865,475" fill="#FFF7ED" stroke="#F97316" stroke-width="2" filter="url(#dropShadow)"/>
+  <text x="910" y="479" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="bold" fill="#1a1a2e">Contains?</text>
+
+  <!-- Contains Yes -> ALLOW -->
+  <line x1="955" y1="475" x2="1070" y2="475" stroke="#10B981" stroke-width="2" marker-end="url(#arrowhead-green)"/>
+  <text x="1010" y="465" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#10B981" text-anchor="middle">Yes</text>
+  <rect x="1070" y="450" width="100" height="50" rx="12" fill="#ECFDF5" stroke="#10B981" stroke-width="2" filter="url(#dropShadow)"/>
+  <text x="1120" y="480" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#10B981">ALLOW</text>
+
+  <!-- Contains No -> Stage 2 -->
+  <line x1="910" y1="520" x2="910" y2="560" stroke="#94A3B8" stroke-width="2" marker-end="url(#arrowhead-arrow)"/>
+  <text x="925" y="545" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#666666">No</text>
+
+  <rect x="770" y="560" width="280" height="120" rx="12" fill="#EBF5FF" stroke="#3B82F6" stroke-width="2" filter="url(#dropShadow)"/>
+  <text x="910" y="585" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1a1a2e">Stage 2: Reasoning</text>
+  <text x="785" y="607" font-family="Inter, system-ui, sans-serif" font-size="12" fill="#333333">max_tokens = 4,096</text>
+  <text x="785" y="625" font-family="Inter, system-ui, sans-serif" font-size="12" fill="#666666">Parse &lt;decision&gt; tag</text>
+  <text x="785" y="643" font-family="Inter, system-ui, sans-serif" font-size="12" fill="#666666">Cache: 1h TTL</text>
+  <text x="785" y="661" font-family="Inter, system-ui, sans-serif" font-size="12" fill="#666666">60-80% hit rate</text>
+
+  <!-- ========== FAR RIGHT: Decision Paths (clear of YOLO) ========== -->
+  <text x="1210" y="275" font-family="Inter, system-ui, sans-serif" font-size="18" font-weight="bold" fill="#8B5CF6">Decision Paths</text>
+  <rect x="1200" y="295" width="270" height="45" rx="10" fill="#ECFDF5" stroke="#10B981" stroke-width="2" filter="url(#dropShadow)"/>
+  <text x="1335" y="323" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="12" fill="#333333">Path 1: ALLOW</text>
+  <rect x="1200" y="350" width="270" height="45" rx="10" fill="#FEF2F2" stroke="#EF4444" stroke-width="2" filter="url(#dropShadow)"/>
+  <text x="1335" y="378" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="12" fill="#333333">Path 2: DENY</text>
+  <rect x="1200" y="405" width="270" height="45" rx="10" fill="#FEFCE8" stroke="#EAB308" stroke-width="2" filter="url(#dropShadow)"/>
+  <text x="1335" y="433" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="12" fill="#333333">Path 3: ASK</text>
+  <rect x="1200" y="460" width="270" height="45" rx="10" fill="#EBF5FF" stroke="#3B82F6" stroke-width="2" filter="url(#dropShadow)"/>
+  <text x="1335" y="488" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="12" fill="#333333">Path 4: Auto Mode</text>
+  <rect x="1200" y="515" width="270" height="45" rx="10" fill="#EBF5FF" stroke="#3B82F6" stroke-width="2" filter="url(#dropShadow)"/>
+  <text x="1335" y="543" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="12" fill="#333333">Path 5: Other Modes</text>
+  <rect x="1200" y="570" width="270" height="45" rx="10" fill="#FEF2F2" stroke="#EF4444" stroke-width="2" filter="url(#dropShadow)"/>
+  <text x="1335" y="598" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="12" fill="#333333">Path 6: Circuit Break</text>
+
+  <!-- YOLO -> Decision Paths arrow -->
+  <line x1="1050" y1="340" x2="1200" y2="340" stroke="#94A3B8" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#arrowhead-arrow)"/>
+
+  <!-- ========== BOTTOM: Output ========== -->
+  <line x1="580" y1="670" x2="580" y2="740" stroke="#94A3B8" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#arrowhead-arrow)"/>
+  <text x="40" y="770" font-family="Inter, system-ui, sans-serif" font-size="18" font-weight="bold" fill="#06B6D4">Output</text>
+  <rect x="30" y="790" width="550" height="80" rx="12" fill="#ECFEFF" stroke="#06B6D4" stroke-width="2" filter="url(#dropShadow)"/>
+  <text x="305" y="815" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1a1a2e">PermissionResult</text>
+  <text x="45" y="840" font-family="Inter, system-ui, sans-serif" font-size="12" fill="#333333">decision + reason + metadata</text>
+
+  <rect x="620" y="790" width="280" height="80" rx="12" fill="#F9FAFB" stroke="#9CA3AF" stroke-width="2" filter="url(#dropShadow)"/>
+  <text x="760" y="815" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1a1a2e">Telemetry</text>
+  <text x="635" y="840" font-family="Inter, system-ui, sans-serif" font-size="12" fill="#333333">events, token usage, latency</text>
 </svg>
