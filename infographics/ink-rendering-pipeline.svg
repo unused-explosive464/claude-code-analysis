@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 2400 1800" xmlns="http://www.w3.org/2000/svg" font-family="'Inter', 'Segoe UI', system-ui, sans-serif">
+  <defs>
+    <!-- Arrow markers -->
+    <marker id="arrowHead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="userSpaceOnUse">
+      <polygon points="0 0, 10 3, 0 6" fill="#60c0ff"/>
+    </marker>
+    <marker id="arrowHeadFeedback" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="userSpaceOnUse">
+      <polygon points="0 0, 10 3, 0 6" fill="#ff6090"/>
+    </marker>
+
+    <style type="text/css">
+      .stage-box { fill: #1a2f4a; stroke: #2d5a8c; stroke-width: 2; }
+      .stage-title { font-size: 20px; font-weight: 600; fill: #60c0ff; }
+      .stage-file { font-size: 13px; fill: #a0d8ff; font-family: 'JetBrains Mono', 'Fira Code', monospace; }
+      .stage-desc { font-size: 12px; fill: #90c0e0; }
+      .stage-item { font-size: 12px; fill: #80b0d0; }
+      .arrow-label { font-size: 12px; fill: #60c0ff; font-weight: 500; text-anchor: middle; }
+      .feedback-label { font-size: 12px; fill: #ff6090; font-weight: 500; text-anchor: middle; }
+      .legend-title { font-size: 18px; font-weight: 600; fill: #60c0ff; }
+      .legend-item { font-size: 12px; fill: #90c0e0; }
+      .metrics-label { font-size: 11px; fill: #7090b0; font-family: 'JetBrains Mono', 'Fira Code', monospace; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="2400" height="1800" fill="#0a0e17"/>
+
+  <!-- ==================== ROW 1: Initial Stages (y=80-380) ==================== -->
+
+  <!-- Stage 1: React Reconciliation -->
+  <rect x="40" y="80" width="700" height="300" class="stage-box" rx="8"/>
+  <text x="60" y="110" class="stage-title">React Reconciliation</text>
+  <text x="60" y="135" class="stage-file">reconciler.ts (512 LOC)</text>
+  <text x="60" y="160" class="stage-desc">Custom React Fiber Reconciler</text>
+
+  <text x="60" y="190" class="stage-item">• Node lifecycle:</text>
+  <text x="80" y="208" class="stage-item">createInstance, appendChild</text>
+  <text x="80" y="224" class="stage-item">commitUpdate, removeChild</text>
+
+  <text x="60" y="250" class="stage-item">• Event handlers via</text>
+  <text x="80" y="266" class="stage-item">_eventHandlers</text>
+
+  <text x="60" y="295" class="stage-item">• DevTools bridge</text>
+
+  <!-- Stage 2: DOM Element Tree -->
+  <rect x="780" y="80" width="700" height="300" class="stage-box" rx="8"/>
+  <text x="800" y="110" class="stage-title">DOM Element Tree</text>
+  <text x="800" y="135" class="stage-file">dom.ts (484 LOC)</text>
+  <text x="800" y="160" class="stage-desc">DOMElement Interface</text>
+
+  <text x="800" y="190" class="stage-item">• Node types: ink-root,</text>
+  <text x="820" y="206" class="stage-item">ink-box, ink-text,</text>
+  <text x="820" y="222" class="stage-item">ink-virtual-text</text>
+
+  <text x="800" y="250" class="stage-item">• Yoga node binding</text>
+
+  <text x="800" y="275" class="stage-item">• Attributes: style,</text>
+  <text x="820" y="291" class="stage-item">textStyle, eventHandlers</text>
+
+  <!-- Stage 3: Yoga Layout -->
+  <rect x="1520" y="80" width="700" height="300" class="stage-box" rx="8"/>
+  <text x="1540" y="110" class="stage-title">Yoga Layout Engine</text>
+  <text x="1540" y="135" class="stage-file">layout/yoga.ts (308 LOC)</text>
+  <text x="1540" y="160" class="stage-desc">Native flex layout</text>
+
+  <text x="1540" y="190" class="stage-item">• Ink props → Yoga enums</text>
+
+  <text x="1540" y="215" class="stage-item">• calculateLayout()</text>
+
+  <text x="1540" y="240" class="stage-item">• 4-slot LRU cache</text>
+
+  <text x="1540" y="265" class="stage-item">• Incremental updates</text>
+
+  <!-- Horizontal arrows Row 1 -->
+  <path d="M 750 230 L 770 230" stroke="#60c0ff" stroke-width="2" fill="none" marker-end="url(#arrowHead)"/>
+  <text x="760" y="215" class="arrow-label">React → DOM</text>
+
+  <path d="M 1490 230 L 1510 230" stroke="#60c0ff" stroke-width="2" fill="none" marker-end="url(#arrowHead)"/>
+  <text x="1500" y="215" class="arrow-label">Build → Layout</text>
+
+  <!-- ==================== ROW 2: Rendering Stages (y=440-780) ==================== -->
+
+  <!-- Vertical arrow from Stage 3 to Stage 4 (left side, outside boxes) -->
+  <path d="M 100 380 L 100 440" stroke="#60c0ff" stroke-width="2" fill="none" marker-end="url(#arrowHead)"/>
+
+  <!-- Stage 4: Render to Output -->
+  <rect x="40" y="440" width="700" height="340" class="stage-box" rx="8"/>
+  <text x="60" y="470" class="stage-title">Render to Output</text>
+  <text x="60" y="495" class="stage-file">render-node-to-output.ts</text>
+  <text x="60" y="512" class="stage-file">(1,462 LOC)</text>
+  <text x="60" y="537" class="stage-desc">PRIMARY ENGINE</text>
+
+  <text x="60" y="567" class="stage-item">• DFS traverse</text>
+
+  <text x="60" y="592" class="stage-item">• Per-node: clip, text wrap,</text>
+  <text x="80" y="608" class="stage-item">borders, selection overlay</text>
+
+  <text x="60" y="633" class="stage-item">• Write/blit/clear/clip</text>
+  <text x="80" y="649" class="stage-item">operations</text>
+
+  <text x="60" y="674" class="stage-item">• Word/grapheme wrapping</text>
+
+  <!-- Stage 5: Screen Buffer -->
+  <rect x="780" y="440" width="700" height="340" class="stage-box" rx="8"/>
+  <text x="800" y="470" class="stage-title">Screen Buffer</text>
+  <text x="800" y="495" class="stage-file">screen.ts (1,486 LOC)</text>
+  <text x="800" y="520" class="stage-desc">Cell grid: packed Int32Array</text>
+
+  <text x="800" y="550" class="stage-item">• Cell: styleId[31:17] |</text>
+  <text x="820" y="566" class="stage-item">hyperlinkId[16:2] |</text>
+  <text x="820" y="582" class="stage-item">width[1:0]</text>
+
+  <text x="800" y="607" class="stage-item">• THREE POOLS:</text>
+  <text x="820" y="623" class="stage-item">CharPool (ASCII 30% faster)</text>
+  <text x="820" y="639" class="stage-item">StylePool, HyperlinkPool</text>
+
+  <!-- Stage 6: Frame Diff & Terminal -->
+  <rect x="1520" y="440" width="700" height="340" class="stage-box" rx="8"/>
+  <text x="1540" y="470" class="stage-title">Frame Diff & Terminal</text>
+  <text x="1540" y="495" class="stage-file">log-update.ts (773 LOC)</text>
+  <text x="1540" y="520" class="stage-desc">Frame-by-frame optimization</text>
+
+  <text x="1540" y="550" class="stage-item">• ANSI style tracking</text>
+
+  <text x="1540" y="575" class="stage-item">• Cursor optimization</text>
+
+  <text x="1540" y="600" class="stage-item">• DECSTBM scroll (10KB→50B)</text>
+
+  <text x="1540" y="625" class="stage-item">• DEC 2026 sync output</text>
+
+  <text x="1540" y="650" class="stage-item">• writeDiffToTerminal()</text>
+
+  <!-- Horizontal arrows Row 2 -->
+  <path d="M 750 610 L 770 610" stroke="#60c0ff" stroke-width="2" fill="none" marker-end="url(#arrowHead)"/>
+  <text x="760" y="595" class="arrow-label">Layout → Buffer</text>
+
+  <path d="M 1490 610 L 1510 610" stroke="#60c0ff" stroke-width="2" fill="none" marker-end="url(#arrowHead)"/>
+  <text x="1500" y="595" class="arrow-label">Buffer → Diff</text>
+
+  <!-- ==================== ROW 3: Supporting Systems (y=840-1140) ==================== -->
+
+  <!-- Selection System -->
+  <rect x="40" y="840" width="700" height="300" class="stage-box" rx="8"/>
+  <text x="60" y="870" class="stage-title">Selection System</text>
+  <text x="60" y="895" class="stage-file">selection.ts (917 LOC)</text>
+  <text x="60" y="920" class="stage-desc">Anchor/focus coordinates</text>
+
+  <text x="60" y="950" class="stage-item">• Multi-click: char/word/line</text>
+
+  <text x="60" y="975" class="stage-item">• Drag-to-scroll</text>
+
+  <text x="60" y="1000" class="stage-item">• hit-test.ts:</text>
+  <text x="80" y="1016" class="stage-item">click → DOM element</text>
+
+  <!-- Terminal Capabilities -->
+  <rect x="780" y="840" width="700" height="300" class="stage-box" rx="8"/>
+  <text x="800" y="870" class="stage-title">Terminal Capabilities</text>
+  <text x="800" y="895" class="stage-file">terminal.ts + terminal-querier.ts</text>
+  <text x="800" y="920" class="stage-desc">Dynamic capability detection</text>
+
+  <text x="800" y="950" class="stage-item">• XTVERSION, Kitty keyboard</text>
+
+  <text x="800" y="975" class="stage-item">• DEC 2026, xterm.js detection</text>
+
+  <text x="800" y="1000" class="stage-item">• Dynamic feature selection</text>
+
+  <!-- Input Pipeline -->
+  <rect x="1520" y="840" width="700" height="300" class="stage-box" rx="8"/>
+  <text x="1540" y="870" class="stage-title">Input Pipeline</text>
+  <text x="1540" y="895" class="stage-file">parse-keypress.ts (801 LOC)</text>
+  <text x="1540" y="920" class="stage-desc">Multi-protocol input parsing</text>
+
+  <text x="1540" y="950" class="stage-item">• CSI u (Kitty), xterm</text>
+  <text x="1560" y="966" class="stage-item">modifyOtherKeys</text>
+
+  <text x="1540" y="991" class="stage-item">• SGR mouse, bracketed paste</text>
+
+  <text x="1540" y="1016" class="stage-item">• Capture→bubble dispatch</text>
+
+  <!-- ==================== FEEDBACK ARROWS ==================== -->
+
+  <!-- Selection → Stage 4 (short vertical arrow on left) -->
+  <path d="M 80 840 L 80 780" stroke="#ff6090" stroke-width="2" stroke-dasharray="5,5" fill="none" marker-end="url(#arrowHeadFeedback)"/>
+
+  <!-- Terminal Caps → Stage 6 (short connection, right side) -->
+  <path d="M 1480 950 L 1520 950" stroke="#ff6090" stroke-width="2" stroke-dasharray="5,5" fill="none" marker-end="url(#arrowHeadFeedback)"/>
+
+  <!-- Input Pipeline → Stage 1 (curved up and around to top left) -->
+  <!-- Goes up right side, across top, down to left side -->
+  <path d="M 1550 840 L 1550 20 Q 1550 -20 1250 -20 Q 200 -20 200 80"
+        stroke="#ff6090" stroke-width="2" stroke-dasharray="5,5" fill="none" marker-end="url(#arrowHeadFeedback)"/>
+
+  <!-- ==================== LEGEND & METRICS (Bottom Strip y=1300-1500) ==================== -->
+
+  <line x1="40" y1="1300" x2="2360" y2="1300" stroke="#2d5a8c" stroke-width="1"/>
+
+  <text x="40" y="1335" class="legend-title">Architecture Overview</text>
+
+  <text x="40" y="1365" class="legend-item">• Forward flow (blue): Input through reconciliation, layout, render, diff to terminal output</text>
+  <text x="40" y="1385" class="legend-item">• Feedback flow (pink dashed): Selection state → render, terminal caps → output, input → reconciliation</text>
+
+  <text x="40" y="1420" class="metrics-label">Total LOC: 7,743 | Pools: 3 | Max LRU: 4 | DFS traversal with clip regions and selection overlay</text>
+
+  <text x="40" y="1450" class="metrics-label">Key optimization: Frame diff reduces output from 10KB average to 50B on idle scroll; cell packing uses 31 bits for style ID</text>
+
+  <text x="40" y="1480" class="metrics-label">Input protocols: CSI u (Kitty), xterm modifyOtherKeys, SGR mouse, bracketed paste, dynamic capability detection</text>
+
+</svg>

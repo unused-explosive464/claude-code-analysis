@@ -15,6 +15,9 @@
       .line { stroke: #30363d; stroke-width: 1; fill: none; }
       .divider { stroke: #30363d; stroke-width: 2; }
     </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="userSpaceOnUse">
+      <polygon points="0 0, 10 3, 0 6" fill="#30363d"/>
+    </marker>
   </defs>
 
   <rect class="bg" width="900" height="600"/>

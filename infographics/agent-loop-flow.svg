@@ -15,6 +15,9 @@
       .arrow { stroke: #58a6ff; stroke-width: 1.5; fill: none; }
       .arrow-head { fill: #58a6ff; }
     </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="userSpaceOnUse">
+      <polygon points="0 0, 10 3, 0 6" class="arrow-head"/>
+    </marker>
   </defs>
 
   <rect class="bg" width="900" height="600"/>
@@ -105,11 +108,4 @@
   <path d="M 180 500 L 180 100 L 370 160" class="arrow" marker-end="url(#arrowhead)" stroke-dasharray="2,2"/>
   <text x="150" y="300" class="text-small">escalation</text>
   <text x="150" y="315" class="text-small">recovery</text>
-
-  <!-- Arrow marker -->
-  <defs>
-    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
-      <polygon points="0 0, 10 3, 0 6" class="arrow-head"/>
-    </marker>
-  </defs>
 </svg>

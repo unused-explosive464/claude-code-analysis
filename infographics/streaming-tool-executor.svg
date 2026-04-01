@@ -16,6 +16,9 @@
       .arrow { stroke: #58a6ff; stroke-width: 1.5; fill: none; }
       .arrow-head { fill: #58a6ff; }
     </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="userSpaceOnUse">
+      <polygon points="0 0, 10 3, 0 6" class="arrow-head"/>
+    </marker>
   </defs>
 
   <rect class="bg" width="900" height="600"/>
@@ -107,11 +110,4 @@
   <rect x="280" y="530" width="570" height="60" class="box-output" rx="4"/>
   <text x="565" y="555" class="text-primary" text-anchor="middle">Tool Results Yielded → Agent Loop</text>
   <text x="565" y="572" class="text-small" text-anchor="middle">(next iteration continues with results)</text>
-
-  <!-- Arrow marker -->
-  <defs>
-    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
-      <polygon points="0 0, 10 3, 0 6" class="arrow-head"/>
-    </marker>
-  </defs>
 </svg>

@@ -1,93 +1,85 @@
-# Command System Deep-Dive Analysis
+# Tools, Commands & Plugin System
 
-## Overview
+Complete analysis of Claude Code's tool execution, command dispatch, plugin lifecycle, skill system, and extension points. This section covers the ~150 built-in commands, dynamic plugin system with 20,521 LOC across 44 files, MCP integration, computer-use capabilities, and the Claude-in-Chrome extension.
 
-This directory contains a comprehensive analysis of Claude Code v2.1.88's command system architecture.
+## Documents
 
-## Main Document
+| Filename | Description | Lines |
+|----------|-------------|-------|
+| **command-system-deep-dive.md** | 189 command files with 26,428 LOC, 3 execution types (prompt/local/local-jsx), memoized registry, dynamic loading, feature-flagged conditional imports, auth-gating for Anthropic-only commands, 3,200-line /insights command | 1,850 |
+| **plugin-system-deep-dive.md** | 44-file plugin system with 20,521 LOC, full lifecycle (discovery → validation → install → execute → update → delist), five-scope priority merging (managed > user > project > local > flag), DFS dependency resolution with cycle detection, homograph attack detection | 1,279 |
+| **tool-contract-inventory.md** | Complete catalog of tool contracts and execution interfaces | 335 |
+| **command-tool-skill-surface.md** | Mapping of command/tool/skill surface area and execution boundaries | 422 |
+| **computer-use-deep-dive.md** | Computer use implementation, screen capture, input handling, action sequences | 542 |
+| **computer-use-protocols.md** | Computer use protocol specifications and API contracts | 757 |
+| **claude-in-chrome-deep-dive.md** | Chrome extension integration, tab management, DOM manipulation, JavaScript execution context, content scripts | 1,764 |
+| **buddy-system-deep-dive.md** | Companion sprite/buddy system, animation, state management, interactive UI feedback | 886 |
+| **bundled-skills-catalog.md** | Built-in skills inventory and capabilities | 288 |
+| **keybindings-system.md** | Keybinding system architecture, modifier detection, terminal compatibility | 589 |
+| **plugin-marketplace-contract.md** | Plugin marketplace APIs, submission requirements, versioning contracts | 367 |
+| **small-services-deep-dive.md** | Smaller service subsystems and utility providers | 951 |
+| **utility-subsystems-deep-dive.md** | Utility subsystems including logging, caching, state management | 1,155 |
+| **unmapped-systems.md** | Remaining unmapped areas and TODO items | 149 |
 
-**File:** `command-system-deep-dive.md` (1,850 lines)
+## Architecture Diagrams
 
-A complete reverse-engineering analysis covering:
-- Registry architecture and import organization
-- Command type system (prompt, local, local-jsx)
-- Dynamic loading pipeline (skills, plugins, MCP, workflows)
-- Three execution models with detailed comparisons
-- Feature-gated commands and availability filtering
-- The 3,200-line /insights command (session analysis)
-- Plugin marketplace system (17 files, 7,575 LOC)
-- GitHub Actions multi-step wizard (14 components, 2,352 LOC)
-- Session management (/resume, /session, /branch, /rewind)
-- All built-in commands organized by category
-- Security boundaries and attack mitigations
-- Performance optimizations (memoization, lazy loading)
-- Design decisions and trade-offs
+<img src="../infographics/command-dispatch.svg" alt="Command Dispatch Pipeline" width="600" />
 
-## Quick Navigation
+Command dispatch flow: command lookup → feature-flag evaluation → auth-gating → execution model selection (prompt/local/local-jsx).
 
-### Core Architecture (Sections 1-5)
-- Registry memoization & import organization
-- CommandBase + three type union
-- Provider/auth gating
-- Dynamic loading pipeline
-- Command discovery utilities
+<img src="../infographics/plugin-lifecycle.svg" alt="Plugin Lifecycle" width="600" />
 
-### Execution Models (Sections 6-15)
-- Remote-safe vs bridge-safe commands
-- Command filtering (skill listings, MCP commands)
-- Cache invalidation strategies
-- /insights deep-dive
-- Plugin marketplace
-- GitHub Actions wizard
-- Code review (/review vs /ultrareview)
+Plugin lifecycle: discovery → validation → installation → hook registration → execution → update checks → delisting.
 
-### Commands & Features (Sections 16-22)
-- /mcp add CLI subcommand
-- /init codebase onboarding (8 phases)
-- Complete built-in command registry
-- Command interaction patterns (onDone, context)
-- Feature-gated commands
-- All three command type examples
+<img src="../infographics/streaming-tool-executor.svg" alt="Streaming Tool Executor" width="600" />
 
-### Security & Performance (Sections 23-25)
-- Attack vectors and mitigations
-- Performance analysis (discovery, lazy loading, insights)
-- Extensibility: how to add new commands
-- Future design directions
+Streaming tool executor architecture for managing concurrent tool invocations with resource limits and cancellation.
 
-## Key Insights
+## Key Findings
 
-1. **Layered Memoization:** COMMANDS() memoized globally; loadAllCommands() memoized per cwd
-2. **Three Execution Models:** Prompt (model-invocable), Local (Node.js), Local-JSX (TUI)
-3. **Dynamic Registration:** Skills, plugins, MCP, workflows inject commands at runtime
-4. **Priority System:** Bundled > built-in plugins > user skills > workflows > installed plugins > built-ins
-5. **Auth Gating:** Commands hidden based on provider (Claude.ai vs Console API vs Bedrock)
-6. **Feature Flags:** Bun bundled features gate conditional imports & command availability
-7. **Lazy Loading:** Large commands (insights: 113KB) defer import until invocation
-8. **Bridge Safety:** Prompt commands always safe, local-jsx always blocked, local needs allowlist
+### Command System
 
-## Codebase Statistics
+- **~150 Built-in Commands**: 189 command files with 26,428 LOC covering operations, debugging, workflows, and analysis
+- **3 Execution Types**:
+  - `prompt` — Commands rendered as text and invoked by the model
+  - `local` — JavaScript/TypeScript executed locally in Node.js
+  - `local-jsx` — Terminal UI components rendered via Ink
+- **Memoized Registry**: `COMMANDS()` function caches results to avoid repeated environment reads and config file I/O
+- **Feature-Flagged Loading**: Conditional imports using Bun's `feature()` API defer expensive commands until bundling
+- **Auth-Gated Commands**: `INTERNAL_ONLY_COMMANDS` array filters Anthropic-only commands from external builds via `USER_TYPE` check
+- **Lazy-Loaded 3,200-Line Commands**: `/insights` command defers import to avoid bloating initial bundle
 
-- **Total commands:** ~150 built-in + dynamic skills/plugins
-- **Internal-only commands:** 14 (Anthropic-only, eliminated from external builds)
-- **Feature-gated commands:** 15+ (behind Bun feature flags)
-- **Command files:** 189 total across src/commands/
-- **Central registry:** /src/commands.ts (755 lines)
-- **Type definitions:** /src/types/command.ts (217 lines)
-- **Largest command:** insights.ts (3,200 lines, lazy-loaded)
+### Plugin System
 
-## Design Principles
+- **20,521 LOC across 44 Files**: Comprehensive plugin infrastructure managing discovery, validation, installation, execution, and updates
+- **Plugin Lifecycle**: `discovery` → `validation` → `install` → `execute` → `update` → `delist`
+- **Three Discovery Sources**:
+  - Marketplace plugins (versioned ZIP cache)
+  - Inline plugins (`--plugin-dir` CLI flag)
+  - Built-in plugins (hardcoded, no external dependencies)
+- **Five-Scope Priority Merging**: `managed` > `user` > `project` > `local` > `flag` for per-repo configuration control
+- **Component Detection**: Plugins support commands, agents, skills, output styles, hooks, and MCP servers
+- **Dependency Resolution**: DFS algorithm with cycle detection; cross-marketplace boundary enforcement
+- **Security Measures**:
+  - Homograph attack detection in plugin names
+  - Path traversal prevention
+  - Manifest validation (Zod schema)
+  - ZIP integrity verification
 
-✓ **Composition over monolithism** — Commands authored by Anthropic, users, plugins, MCP, workflows
-✓ **Type safety** — Union types for three execution models
-✓ **Performance** — Memoization, lazy loading, parallel I/O
-✓ **Security** — Allowlisting, permission boundaries, trust warnings
-✓ **Extensibility** — Clear registration patterns for new commands
-✓ **UX** — Immediate interactive commands, queued async operations
+### Tool Contracts
 
-## Related Analyses
+- **Streaming Tool Executor**: Manages concurrent tool invocations with resource pooling and cancellation support
+- **Computer Use**: Screen capture, mouse/keyboard input, action sequencing with feedback
+- **Chrome Extension**: Tab management, DOM manipulation, JavaScript execution in isolated context
+- **MCP Integration**: Protocol support for distributed tool providers
 
-- (Future) Security model & permission framework
-- (Future) Plugin architecture & marketplace integration
-- (Future) MCP server integration & tool reflection
-- (Future) Skill discovery & model invocation system
+### Bundled Skills
+
+- Built-in skill catalog with operators, analyzers, and workflow automation
+- Output-style extensibility for custom rendering
+- Hook system for plugin lifecycle integration
+
+---
+
+**Analysis Date**: 2026-04-02
+**Codebase Path**: `/sessions/cool-friendly-einstein/mnt/claude-code/src/commands/`, `/src/plugins/`

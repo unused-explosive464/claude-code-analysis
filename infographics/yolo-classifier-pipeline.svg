@@ -122,7 +122,7 @@
 
   <!-- Arrow marker -->
   <defs>
-    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="userSpaceOnUse">
       <polygon points="0 0, 10 3, 0 6" class="arrow-head"/>
     </marker>
   </defs>

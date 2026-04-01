@@ -1,0 +1,235 @@
+<svg viewBox="0 0 2000 1200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .bg { fill: #0a0e17; }
+      .text-title { font-family: 'Courier New', monospace; font-size: 32px; font-weight: bold; fill: #4db8ff; }
+      .text-heading { font-family: 'Courier New', monospace; font-size: 18px; font-weight: bold; fill: #66d9ff; }
+      .text-label { font-family: 'Courier New', monospace; font-size: 14px; fill: #a0d0ff; }
+      .text-small { font-family: 'Courier New', monospace; font-size: 12px; fill: #7a9acc; }
+      .text-tiny { font-family: 'Courier New', monospace; font-size: 11px; fill: #5a7acc; }
+      .box-entry { fill: #2a1a3a; stroke: #dd66ff; stroke-width: 2; }
+      .box-parse { fill: #1a3a2a; stroke: #44ff88; stroke-width: 2; }
+      .box-match { fill: #1a3a52; stroke: #4db8ff; stroke-width: 2; }
+      .box-filter { fill: #3a2a1a; stroke: #ff8844; stroke-width: 2; }
+      .box-dispatch { fill: #1a2a3a; stroke: #66d9ff; stroke-width: 2; }
+      .box-execute { fill: #2a3a1a; stroke: #88ff44; stroke-width: 2; }
+      .box-safe { fill: #1a3a2a; stroke: #44ff88; stroke-width: 2; }
+      .box-warning { fill: #3a2a1a; stroke: #ff8844; stroke-width: 2; }
+      .line-flow { stroke: #4db8ff; stroke-width: 2; fill: none; }
+      .line-branch { stroke: #66d9ff; stroke-width: 1.5; fill: none; }
+      .arrow { fill: #4db8ff; }
+      .box-secondary { fill: #1a2a3a; stroke: #66d9ff; stroke-width: 1.5; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="2000" height="1200" class="bg"/>
+
+  <!-- Title -->
+  <text x="1000" y="40" class="text-title" text-anchor="middle">Claude Code v2.1.88 — Command Dispatch Pipeline</text>
+
+  <!-- SECTION 1: Entry Point -->
+  <text x="30" y="90" class="text-heading">STEP 1: USER INPUT → PARSE</text>
+
+  <rect x="30" y="120" width="300" height="100" class="box-entry" rx="8"/>
+  <text x="180" y="150" class="text-label" text-anchor="middle">PromptInput Component</text>
+  <text x="50" y="175" class="text-small">User types: "/command args"</text>
+  <text x="50" y="195" class="text-small">Keypress → onKeyDown handler</text>
+  <text x="50" y="215" class="text-small">Extract cmd + arguments</text>
+
+  <path d="M 330 170 L 390 170" class="line-flow" marker-end="url(#arrowblue)"/>
+
+  <rect x="390" y="120" width="300" height="100" class="box-parse" rx="8"/>
+  <text x="540" y="150" class="text-label" text-anchor="middle">Parse Phase</text>
+  <text x="410" y="175" class="text-small">Split on whitespace</text>
+  <text x="410" y="195" class="text-small">cmd = first token</text>
+  <text x="410" y="215" class="text-small">args = remaining array</text>
+
+  <!-- SECTION 2: Command Search -->
+  <text x="750" y="90" class="text-heading">STEP 2: COMMAND SEARCH (150 total)</text>
+
+  <rect x="750" y="120" width="320" height="100" class="box-match" rx="8"/>
+  <text x="910" y="150" class="text-label" text-anchor="middle">Search COMMANDS[] Array</text>
+  <text x="770" y="175" class="text-small">~110 built-in commands</text>
+  <text x="770" y="195" class="text-small">+ Skills (dynamic load)</text>
+  <text x="770" y="215" class="text-small">+ Plugins + MCP + Workflows</text>
+
+  <path d="M 690 170 L 750 170" class="line-flow" marker-end="url(#arrowblue)"/>
+
+  <!-- Matching logic -->
+  <rect x="1100" y="120" width="320" height="100" class="box-match" rx="8"/>
+  <text x="1260" y="150" class="text-label" text-anchor="middle">Match by Name + Aliases</text>
+  <text x="1120" y="175" class="text-small">cmd.name === input?</text>
+  <text x="1120" y="195" class="text-small">cmd.aliases.includes()?</text>
+  <text x="1120" y="215" class="text-small">Exact match priority</text>
+
+  <path d="M 1070 170 L 1100 170" class="line-flow" marker-end="url(#arrowblue)"/>
+
+  <!-- SECTION 3: Filtering & Availability -->
+  <text x="30" y="280" class="text-heading">STEP 3: FILTER &amp; AVAILABILITY CHECKS</text>
+
+  <rect x="30" y="310" width="280" height="140" class="box-filter" rx="8"/>
+  <text x="170" y="335" class="text-label" text-anchor="middle">isEnabled()</text>
+  <text x="50" y="360" class="text-small">Command disabled?</text>
+  <text x="50" y="380" class="text-small">Skip if false</text>
+  <text x="50" y="400" class="text-small">Default: true</text>
+  <text x="50" y="420" class="text-small">Can override per session</text>
+
+  <path d="M 310 380 L 360 380" class="line-flow" marker-end="url(#arrowblue)"/>
+
+  <rect x="360" y="310" width="280" height="140" class="box-filter" rx="8"/>
+  <text x="500" y="335" class="text-label" text-anchor="middle">isHidden</text>
+  <text x="380" y="360" class="text-small">Hide from command menu?</text>
+  <text x="380" y="380" class="text-small">/help excludes if true</text>
+  <text x="380" y="400" class="text-small">Still executable via /cmd</text>
+  <text x="380" y="420" class="text-small">Example: /internal-debug</text>
+
+  <path d="M 640 380 L 690 380" class="line-flow" marker-end="url(#arrowblue)"/>
+
+  <rect x="690" y="310" width="280" height="140" class="box-filter" rx="8"/>
+  <text x="830" y="335" class="text-label" text-anchor="middle">Availability Check</text>
+  <text x="710" y="360" class="text-small">availability: 'claude-ai'?</text>
+  <text x="710" y="380" class="text-small">availability: 'console'?</text>
+  <text x="710" y="400" class="text-small">availability: 'both'?</text>
+  <text x="710" y="420" class="text-small">Skip if not in context</text>
+
+  <path d="M 970 380 L 1020 380" class="line-flow" marker-end="url(#arrowblue)"/>
+
+  <rect x="1020" y="310" width="280" height="140" class="box-filter" rx="8"/>
+  <text x="1160" y="335" class="text-label" text-anchor="middle">Feature Gates</text>
+  <text x="1040" y="360" class="text-small">cmd.featureGate?</text>
+  <text x="1040" y="380" class="text-small">Check flags: beta, deprecated</text>
+  <text x="1040" y="400" class="text-small">User tier restrictions?</text>
+  <text x="1040" y="420" class="text-small">Graceful degradation</text>
+
+  <path d="M 1300 380 L 1350 380" class="line-flow" marker-end="url(#arrowblue)"/>
+
+  <rect x="1350" y="310" width="280" height="140" class="box-filter" rx="8"/>
+  <text x="1490" y="335" class="text-label" text-anchor="middle">Permission Bridge</text>
+  <text x="1370" y="360" class="text-small">cmd.requiresPermission?</text>
+  <text x="1370" y="380" class="text-small">Check grant cache</text>
+  <text x="1370" y="400" class="text-small">Fallback to UI modal</text>
+  <text x="1370" y="420" class="text-small">Deny if user rejects</text>
+
+  <!-- SECTION 4: Dynamic Sources -->
+  <text x="30" y="510" class="text-heading">DYNAMIC COMMAND SOURCES (150 Total)</text>
+
+  <rect x="30" y="540" width="180" height="100" class="box-secondary" rx="6"/>
+  <text x="120" y="560" class="text-small">Built-in</text>
+  <text x="45" y="585" class="text-tiny">~110 commands</text>
+  <text x="45" y="603" class="text-tiny">core features</text>
+  <text x="45" y="621" class="text-tiny">always available</text>
+
+  <rect x="230" y="540" width="180" height="100" class="box-secondary" rx="6"/>
+  <text x="320" y="560" class="text-small">Skills</text>
+  <text x="245" y="585" class="text-tiny">Dynamic load</text>
+  <text x="245" y="603" class="text-tiny">Per-session</text>
+  <text x="245" y="621" class="text-tiny">User-defined</text>
+
+  <rect x="430" y="540" width="180" height="100" class="box-secondary" rx="6"/>
+  <text x="520" y="560" class="text-small">Plugins</text>
+  <text x="445" y="585" class="text-tiny">Org-specific</text>
+  <text x="445" y="603" class="text-tiny">Custom tools</text>
+  <text x="445" y="621" class="text-tiny">Workflows</text>
+
+  <rect x="630" y="540" width="180" height="100" class="box-secondary" rx="6"/>
+  <text x="720" y="560" class="text-small">MCP Servers</text>
+  <text x="645" y="585" class="text-tiny">Model Context</text>
+  <text x="645" y="603" class="text-tiny">Protocol tools</text>
+  <text x="645" y="621" class="text-tiny">External APIs</text>
+
+  <rect x="830" y="540" width="180" height="100" class="box-secondary" rx="6"/>
+  <text x="920" y="560" class="text-small">Bundled Skills</text>
+  <text x="845" y="585" class="text-tiny">Shipped with</text>
+  <text x="845" y="603" class="text-tiny">Claude Code</text>
+  <text x="845" y="621" class="text-tiny">Versioned</text>
+
+  <!-- SECTION 5: Type Dispatch -->
+  <text x="30" y="710" class="text-heading">STEP 4: TYPE DISPATCH (3 Types)</text>
+
+  <!-- Type 1: prompt -->
+  <rect x="30" y="740" width="320" height="190" class="box-dispatch" rx="8"/>
+  <text x="190" y="765" class="text-label" text-anchor="middle">Type: "prompt"</text>
+  <text x="50" y="790" class="text-small">Strategy: Inject into model</text>
+
+  <text x="50" y="810" class="text-tiny">1. getPromptForCommand()</text>
+  <text x="50" y="828" class="text-tiny">2. Expand template variables</text>
+  <text x="50" y="846" class="text-tiny">3. Append to conversation</text>
+  <text x="50" y="864" class="text-tiny">4. Model processes naturally</text>
+  <text x="50" y="882" class="text-tiny">5. Returns: text response</text>
+
+  <text x="50" y="920" class="text-small" style="fill:#44ff88;">✓ ALWAYS SAFE</text>
+
+  <!-- Type 2: local -->
+  <rect x="390" y="740" width="320" height="190" class="box-dispatch" rx="8"/>
+  <text x="550" y="765" class="text-label" text-anchor="middle">Type: "local"</text>
+  <text x="410" y="790" class="text-small">Strategy: Execute locally</text>
+
+  <text x="410" y="810" class="text-tiny">1. load() command module</text>
+  <text x="410" y="828" class="text-tiny">2. call(args, context)</text>
+  <text x="410" y="846" class="text-tiny">3. Returns: LocalCommandResult</text>
+  <text x="410" y="864" class="text-tiny">   {text, compact, skip}</text>
+  <text x="410" y="882" class="text-tiny">4. Inject result to model</text>
+
+  <text x="410" y="920" class="text-small" style="fill:#ff8844;">⚠ NEEDS ALLOWLIST</text>
+
+  <!-- Type 3: local-jsx -->
+  <rect x="750" y="740" width="320" height="190" class="box-dispatch" rx="8"/>
+  <text x="910" y="765" class="text-label" text-anchor="middle">Type: "local-jsx"</text>
+  <text x="770" y="790" class="text-small">Strategy: React component</text>
+
+  <text x="770" y="810" class="text-tiny">1. load() JSX module</text>
+  <text x="770" y="828" class="text-tiny">2. call() returns React elem</text>
+  <text x="770" y="846" class="text-tiny">3. Render as modal overlay</text>
+  <text x="770" y="864" class="text-tiny">4. User interaction</text>
+  <text x="770" y="882" class="text-tiny">5. Returns: UI result</text>
+
+  <text x="770" y="920" class="text-small" style="fill:#ff4444;">✗ ALWAYS BLOCKED</text>
+
+  <!-- SECTION 6: Command Allowlist -->
+  <text x="1100" y="710" class="text-heading">BRIDGE SAFETY: Local Command Allowlist (21)</text>
+
+  <rect x="1100" y="740" width="840" height="200" class="box-warning" rx="8"/>
+
+  <text x="1120" y="765" class="text-small">Approved for local execution (+ permission check):</text>
+
+  <text x="1120" y="785" class="text-tiny">• /commit, /push, /pr, /git-reset, /rebase (6 git ops)</text>
+  <text x="1120" y="803" class="text-tiny">• /bash, /node, /python (3 shell backends)</text>
+  <text x="1120" y="821" class="text-tiny">• /read, /write, /edit, /glob, /grep (5 file ops)</text>
+  <text x="1120" y="839" class="text-tiny">• /download, /upload (2 network ops)</text>
+  <text x="1120" y="857" class="text-tiny">• /screenshot, /click, /type (3 browser ops)</text>
+  <text x="1120" y="875" class="text-tiny">• /find-replace, /format (2 text ops)</text>
+
+  <text x="1120" y="910" class="text-small" style="fill:#ff8844;">All require explicit permission confirmation before execution</text>
+
+  <!-- SECTION 7: Complete Flow Diagram -->
+  <text x="30" y="980" class="text-heading">COMPLETE DISPATCH FLOW (Keypress to Execution)</text>
+
+  <rect x="30" y="1010" width="1900" height="140" class="box-secondary" rx="8"/>
+
+  <text x="50" y="1035" class="text-small">1. User presses Enter in PromptInput</text>
+  <text x="50" y="1055" class="text-small">2. onKeyDown handler: check text starts with "/"</text>
+  <text x="50" y="1075" class="text-small">3. Parse command name + args</text>
+  <text x="50" y="1095" class="text-small">4. Search COMMANDS[] (built-in, skills, plugins, MCP, workflows)</text>
+  <text x="50" y="1115" class="text-small">5. Filter: isEnabled(), isHidden, availability, featureGate, permission</text>
+  <text x="50" y="1135" class="text-small">6. Check type (prompt/local/local-jsx)</text>
+
+  <text x="1100" y="1035" class="text-small">7. Type dispatch:</text>
+  <text x="1100" y="1055" class="text-small">   • prompt: inject → model processes → response</text>
+  <text x="1100" y="1075" class="text-small">   • local: permission check → load() → call() → result injected</text>
+  <text x="1100" y="1095" class="text-small">   • local-jsx: block (never executed)</text>
+  <text x="1100" y="1115" class="text-small">8. Return LocalCommandResult {text, compact, skip}</text>
+  <text x="1100" y="1135" class="text-small">9. UI shows command result (inline or modal)</text>
+
+  <defs>
+    <marker id="arrowblue" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L0,6 L9,3 z" fill="#4db8ff"/>
+    </marker>
+    <marker id="arrowgreen" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L0,6 L9,3 z" fill="#22c55e"/>
+    </marker>
+    <marker id="arrowred" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L0,6 L9,3 z" fill="#ef4444"/>
+    </marker>
+  </defs>
+</svg>
