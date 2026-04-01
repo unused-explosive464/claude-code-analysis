@@ -6,9 +6,11 @@ A complete reverse-engineering and R&D extraction of Anthropic's Claude Code cod
 
 Claude Code is a complex, production-grade system. This extraction documents its internal design through rigorous static analysis, AST inspection, and systematic reverse engineering of source code. The result is a detailed technical knowledge base suitable for researchers, engineers, and anyone interested in understanding how modern AI coding assistants are built.
 
-The analysis was performed by **Karan Prasad** and represents several months of systematic investigation.
+On March 31, 2026, Anthropic's Claude Code client-side source was inadvertently exposed through a publicly accessible `.map` file shipped with the production npm package. This repository is the result of analyzing that leaked source. It contains no redistributed code — only original findings, observations, and documentation written by the author.
 
-### Contact & Resources
+The analysis was performed by **Karan Prasad**.
+
+### Contact
 
 - Email: hello@karanprasad.com
 - Blog: https://karanprasad.com
@@ -124,21 +126,27 @@ This is not a decompilation or disassembly. The extraction was performed using:
 
 See [METHODOLOGY.md](METHODOLOGY.md) for the complete technical approach.
 
-## What This Is (And What It Isn't)
+## Origin and Legal Context
 
-**This repository documents:**
-- Architecture and design patterns in the Claude Code codebase
-- System configurations, feature flags, and operational parameters
-- Security decisions and threat model assumptions
-- Agent loop design and streaming mechanics
-- Tool integration and plugin architecture
+On **March 31, 2026**, Anthropic shipped a production build of the `@anthropic-ai/claude-code` npm package that included a `.map` (source map) file. Source maps are debugging artifacts that reconstruct the original TypeScript source from bundled/minified JavaScript. Because npm packages are public by design, this file was accessible to anyone who installed or inspected the package. Anthropic later removed the source map in a subsequent release.
 
-**This repository does NOT:**
-- Contain the actual source code (analysis only)
-- Provide access to proprietary algorithms or models
-- Include Anthropic's internal documentation or comments
-- Circumvent any security or access controls
-- Represent an official Anthropic publication
+This repository was created by analyzing the source that was exposed through that `.map` file. It is important to understand what this repo is and is not:
+
+**What this repository contains:**
+- Original analysis, commentary, and documentation written by the author
+- Architectural diagrams and infographics created by the author
+- Descriptions of design patterns, algorithms, and system behaviors observed in the source
+- Extracted constants, configuration values, and prompt text quoted for research purposes
+
+**What this repository does NOT contain:**
+- Anthropic's source code (no `.ts` or `.js` files are redistributed)
+- Verbatim copies of substantial code files
+- Any material obtained by circumventing access controls, DRM, or security measures
+- Any proprietary model weights, training data, or API secrets
+
+**Fair use rationale:** This work constitutes independent research and commentary on a publicly (albeit accidentally) available software artifact. The findings are transformative — the original is a functioning codebase; this repo is a structured analysis documenting engineering patterns for educational purposes. No code is redistributed. Short quotations of constants, prompts, and configuration values are included for accuracy and are analogous to quoting passages in a book review. This falls squarely within fair use / fair dealing doctrine in most jurisdictions.
+
+**Disclaimer:** This repository is not affiliated with, endorsed by, or sponsored by Anthropic. All trademarks (Claude, Claude Code, Anthropic) belong to their respective owners. If Anthropic requests removal of specific content, the author will comply promptly — reach out at hello@karanprasad.com.
 
 ## Use Cases
 
@@ -153,15 +161,33 @@ Researchers, engineers, and students will find value in:
 
 ## License
 
+The **original analysis, documentation, diagrams, and commentary** in this repository are released under the MIT License:
+
+```
 MIT License
 
-Copyright (c) 2025 Karan Prasad
+Copyright (c) 2026 Karan Prasad
 
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+```
+
+**Important:** This license covers only the author's original work (analysis text, diagrams, methodology documentation). It does not grant any rights to Anthropic's underlying intellectual property. Quoted constants, prompt fragments, and configuration values remain the property of Anthropic, PBC and are included here under fair use for research and commentary purposes.
 
 ## Contributing
 
@@ -169,8 +195,10 @@ This is a research and documentation repository. Pull requests for corrections, 
 
 ## Acknowledgments
 
-This extraction required systematic analysis of a large, complex codebase. Special thanks to the teams and tools that made this investigation possible.
+Credit to Anthropic for building a genuinely impressive system. The engineering quality visible in this codebase — streaming-first architecture, multi-tier context management, fail-closed security parsing — reflects serious craftsmanship. This analysis is meant as a contribution to the broader understanding of how production AI systems are built, not as an adversarial act.
+
+The source became available due to an accidental `.map` file inclusion in a public npm package on March 31, 2026. No access controls were bypassed.
 
 ---
 
-**Questions or feedback?** Reach out at hello@karanprasad.com or visit https://karanprasad.com.
+**Questions, corrections, or takedown requests?** Reach out at hello@karanprasad.com or visit https://karanprasad.com.

@@ -1,10 +1,18 @@
 # Methodology: Reverse-Engineering Anthropic's Claude Code Codebase
 
-**Author:** Karan Prasad (hello@karanprasad.com, https://karanprasad.com)
+**Author:** Karan Prasad (hello@karanprasad.com | https://karanprasad.com)
+
+## How the Source Became Available
+
+On March 31, 2026, Anthropic published a build of the `@anthropic-ai/claude-code` npm package that included a `.map` (source map) file. Source maps are standard debugging artifacts that map bundled/minified JavaScript back to the original TypeScript source. Because npm packages are publicly downloadable by design, anyone who ran `npm pack` or inspected the package tarball could reconstruct the full TypeScript source tree.
+
+This was not a hack, exploit, or breach. No access controls were bypassed. The `.map` file was shipped as part of a routine npm publish and was later removed by Anthropic in a subsequent release. The analysis in this repository was performed on the source reconstructed from that publicly available artifact.
+
+**No source code is redistributed in this repository.** All content here is original analysis, commentary, and documentation.
 
 ## Overview
 
-This document describes the systematic extraction techniques used to reverse-engineer the Claude Code codebase. The methodology combines static analysis, programmatic extraction, targeted deep reading, and prompt reconstruction across five sequential phases. The approach prioritizes breadth-first discovery (identifying all major components) followed by depth-first investigation (understanding critical systems in detail).
+This document describes the systematic extraction techniques used to analyze the Claude Code codebase. The methodology combines static analysis, programmatic extraction, targeted deep reading, and prompt reconstruction across five sequential phases. The approach prioritizes breadth-first discovery (identifying all major components) followed by depth-first investigation (understanding critical systems in detail).
 
 ---
 
