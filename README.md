@@ -36,6 +36,25 @@ This isn't a shallow overview — it's a complete architectural reconstruction o
 
 ---
 
+## Use It As a Skill (Plug & Play)
+
+This repo isn't just for reading. **Install the `/internals` skill** and your Claude Code agent autonomously consults its own architectural map while working on your tasks.
+
+```bash
+# One command — installs globally across all projects
+mkdir -p ~/.claude/skills/internals && curl -sL \
+  https://raw.githubusercontent.com/thtskaran/claude-code-analysis/master/.claude/skills/internals/SKILL.md \
+  -o ~/.claude/skills/internals/SKILL.md
+```
+
+**What happens:** Claude Code gets a skill that auto-triggers when it detects situations where self-knowledge would help — context growing long, tools getting blocked, agents needing coordination, prompts needing optimization. It fetches the relevant document from this repo via WebFetch and applies the architectural knowledge in real-time.
+
+You can also invoke it manually: `/internals compaction`, `/internals permissions`, `/internals agents`, etc.
+
+→ **[Full install guide](INSTALL-SKILL.md)**
+
+---
+
 ## Navigate by What You Want to Learn
 
 ### "How does it start up?"
